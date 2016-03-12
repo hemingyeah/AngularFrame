@@ -1,0 +1,184 @@
+<!-- <div class="container w-xxl w-auto-xs" ng-controller="LoginCtrl" ng-init="app.settings.container = false;">
+  <a href class="navbar-brand block m-t">{{app.name}}</a>
+  <div class="m-b-lg">
+    <form name="form" class="form-validation">
+      <div class="text-danger wrapper text-center" ng-show="authError">
+          {{authError}}
+      </div>
+      <div class="list-group list-group-sm">
+        <div class="list-group-item">
+          <input type="text" placeholder="用户名" class="form-control no-border" ng-model="model.Name" required>
+        </div>
+        <div class="list-group-item">
+           <input type="password" placeholder="密码" class="form-control no-border" ng-model="model.password" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="event.Login();" data-loading-text="登录中..." ng-disabled='form.$invalid'>登 录</button>
+    </form>
+  </div>
+</div> -->
+
+<!-- 替换网仓登陆页面 -->
+<div class="hold-transition login-page">
+    <!-- header-main -->
+    <header>
+        <div></div>
+    </header>
+    <!-- header-end -->
+    <!-- login-main -->
+    <div class="login-main">
+        <!-- 代码begin -->
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li class="banner1" style="background: url(/resources/images/images/banner_1_bg.jpg) center 0px no-repeat #0EAD51; ">
+                        <div class="content1">
+                            <div id="a3">多重保障,扫码登录<span>更安全</span></div>
+                            <div id="a4"></div>
+                            <div id="a5"></div>
+                        </div>
+                    </li>
+                    <li class="banner1" style="background:#0ab794 ">
+                        <!-- img/e/dist/images/banner4.png) center 0px no-repeat; -->
+                        <div class="content1">
+                            <div id="a8"></div>
+                            <div id="a9"></div>
+                            <div id="a6"></div>
+                            <div id="a7">大服务，贴心护航</div>
+                            <div id="a10">
+                                <span>全程服务</span>
+                                <span>个性化柔性服务</span>
+                                <span>免费升级服务</span>
+                                <span>持续服务，对结果负责</span>
+                                <span>实时服务</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="banner1" style="background: url(/resources/images/images/banner_3_bg.jpg) center 0px no-repeat #ff591f;">
+                        <div class="content1">
+                            <div class="b2_word">
+                                <var id="a21"></var><span id="a23"></span>
+                                <var id="a22"></var>
+                            </div>
+                            <div id="a24">因为专业,所以信赖</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 代码end -->
+        <!-- login-main -->
+        <form id="login-form" method="get" action="">
+            <aside>
+                <div class="login-iscs">
+                    <ul class="login-user">
+                        <h2>
+      <span class="login-user-qrcode cursor"></span>
+      <span class="login-user-tip"></span>
+      账号登录
+    </h2>
+                        <div class="login-user-err">
+                            <div class="login-user-err-main">
+                                <span class="login-user-err-icon"></span>
+                                <span class="login-user-err-text">您的密码错误</span>
+                            </div>
+                            <div class="login-user-tip-main">
+                                <span class="login-user-tip-icon"></span>
+                                <span class="login-user-tip-text">您的可安全登录</span>
+                            </div>
+                        </div>
+                        <div class="login-user-username">
+                            <input type="text" name="username" placeholder="您的账号" />
+                            <!-- required -->
+                        </div>
+                        <div class="login-user-password">
+                            <input type="password" name="password" placeholder="您的密码" />
+                        </div>
+                        <div class="login-pwd-forget">
+                            <a href="#" target="_blank">忘记登录密码？</a>
+                            <div class="login-checkbox cursor"><span class=""></span>记住账号</div>
+                        </div>
+                        <div id="login-submit" class="login-user-submit cursor" ng-click="event.Login();">
+                            登录
+                        </div>
+                        <div class="login-taobao">
+                            <a href="#"><span></span>淘宝登录</a>
+                        </div>
+                    </ul>
+                    <!-- 二维码 -->
+                    <ul class="login-qrcode">
+                        <h2>
+      <span class="login-qrcode-pc cursor"></span>
+      <span class="login-qrcode-tip"></span>
+      手机扫码安全登录
+    </h2>
+                        <div class="login-qrcode-img">
+                            <div class="qrcode-img" style="background: url(/resources/images/rcode_img.jpg) no-repeat"></div>
+                        </div>
+                        <div class="login-qrcode-text">
+                            请打开<span>移动网仓</span>扫一扫登录
+                        </div>
+                        <div class="login-qrcode-mask">
+                            <span class="cursor"></span>
+                            <div>二维码已失效，请点击刷新</div>
+                        </div>
+                    </ul>
+                </div>
+            </aside>
+        </form>
+    </div>
+    <!-- main end-->
+    <!-- footer-main -->
+    <footer>
+        <div>
+            Copyright©2010-2016 浙江网仓科技有限公司 版权所有 浙ICP备11042498-1号
+        </div>
+    </footer>
+    <!-- footer-end -->
+    <script type="text/javascript">
+      $(window).resize(function() {
+          var winwidth = $("body").width();
+          $("#slideBox .bd ul").css("width", winwidth);
+          $("#slideBox .bd ul li").css("width", winwidth);
+      });
+      // 轮播插件
+      $(".slideBox").slide({
+          mainCell: ".bd ul",
+          effect: "fold",
+          autoPlay: true,
+          interTime: 5000,
+          startFun: function(i, c) {
+              del();
+              switch (i) {
+                  case 0:
+                      $("#a3").addClass('animation3');
+                      $("#a4").addClass('animation4');
+                      $("#a5").addClass('animation5');
+                      break;
+                  case 1:
+                      $("#a8").addClass('animation8');
+                      $("#a9").addClass('animation9');
+                      $("#a6").addClass('animation6');
+                      $("#a7").addClass('animation7');
+                      $("#a10").addClass('animation10');
+                      break;
+                  case 2:
+                      $(".b2_word #a21").addClass('animation21');
+                      $(".b2_word #a22").addClass('animation21');
+                      $(".b2_word #a23").addClass('animation20');
+                      $(".content1 #a24").addClass('animation22');
+                      break;
+                  default:
+                      break;
+              }
+          }
+      });
+    </script>
+</div>
