@@ -7,7 +7,7 @@ a{text-decoration:none; cursor:pointer;}
 var,em{font-style:normal;}
 ul,ol{list-style-type:none;}
 input{outline:none} 
-/*body { background:#fff;}*/
+body { background:#fff;}
 /* page icon*/
 .login-logo , .login-checkbox  span ,.login-user-qrcode ,.login-user-tip ,.login-taobao span ,.login-page header > div , ul.login-user .login-user-err-icon ,.login-user-tip-icon ,
 .login-qrcode-pc ,.login-qrcode-tip ,.login-qrcode-mask span {

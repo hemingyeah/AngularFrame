@@ -1027,6 +1027,7 @@ body {
             overflow-x: hidden;
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
+            background: #333;
         }
 
             .app-aside-fixed .aside-wrap .navi-wrap::-webkit-scrollbar {
