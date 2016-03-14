@@ -1,4 +1,4 @@
-; /*!/Views/AppManage/Script/App_Route.js*/
+ /*!/Views/AppManage/Script/App_Route.js*/
 app
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider

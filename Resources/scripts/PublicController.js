@@ -108,19 +108,54 @@ app
             }
         }
     })
-    //网仓登陆页面模版
-    .directive("logintpl", function() {
+/*    .directive("logintpl", function() {
+        debugger
         return {
             restrict: "E",
-            templateUrl: '/Views/Login/login.html',
-            controller: function($scope, service) {
-
-            },
+            replace: true,
+            templateUrL: '/Views/Login/Login.html',
             link: function($scope, element, attr, ngModel) {
-                    
+                debugger
+                $(window).resize(function() {
+                    var winwidth = $("body").width();
+                    $("#slideBox .bd ul").css("width", winwidth);
+                    $("#slideBox .bd ul li").css("width", winwidth);
+                });
+                // 轮播插件
+                $(".slideBox").slide({
+                    mainCell: ".bd ul",
+                    effect: "fold",
+                    autoPlay: true,
+                    interTime: 5000,
+                    startFun: function(i, c) {
+                        del();
+                        switch (i) {
+                            case 0:
+                                $("#a3").addClass('animation3');
+                                $("#a4").addClass('animation4');
+                                $("#a5").addClass('animation5');
+                                break;
+                            case 1:
+                                $("#a8").addClass('animation8');
+                                $("#a9").addClass('animation9');
+                                $("#a6").addClass('animation6');
+                                $("#a7").addClass('animation7');
+                                $("#a10").addClass('animation10');
+                                break;
+                            case 2:
+                                $(".b2_word #a21").addClass('animation21');
+                                $(".b2_word #a22").addClass('animation21');
+                                $(".b2_word #a23").addClass('animation20');
+                                $(".content1 #a24").addClass('animation22');
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                });
             }
         }
-    })
+    })*/
     .directive("fileinput", function() {
         return {
             restrict: "E",

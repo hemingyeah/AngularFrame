@@ -30,6 +30,7 @@ function loginSubmit(){
     });
 }
 $(function(){
+  console.log('success')
     //记住密码
 	$(".login-checkbox").click(function(){
 		$(".login-checkbox span").toggleClass("active");
@@ -48,7 +49,6 @@ $(function(){
 	});
     //切换PC/qrcode点击
 	$(".login-qrcode-pc").click(function(){
-		
 	});
     //登录提交
    $('#login-submit').click(function(){

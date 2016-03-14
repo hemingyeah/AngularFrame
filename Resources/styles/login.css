@@ -73,22 +73,39 @@ input{outline:none}
 	font-weight: bold;
 	color:#646464;
 }
-.login-iscs > ul.login-user .login-user-qrcode {
+.login-user-qrcode {
 	float:right;
 	width:28px;
 	height:28px;
 	display:block;
 	background-position: 0 -46px;
+    transition: background-position .2s cubic-bezier(0.25,0,1,0);
 }
-.login-iscs > ul.login-user .login-user-qrcode:hover {
+/*.login-user-qrcode:hover {
+	background-position: -38px -46px;
+}*/
+.login-user-qrcode.avce {
 	background-position: -38px -46px;
 }
-
+/*.login-user-qrcode.avce:hover {
+	background-position: -114px -46px;
+}*/
 .login-iscs > ul.login-user .login-user-tip {
 	float:right;
 	width:128px;
 	height:28px;
+    margin-right: 28px;
 	background-position: 0 -156px;
+}
+.login-user-qrcode-main {
+    position: absolute;
+    right:0;
+    top:0;
+    width: 28px;
+    height:28px;
+    display: block;
+    margin:32px 35px 0 0;
+    z-index: 999;
 }
 /*qrcode 二维码界面*/
 .login-iscs > ul.login-qrcode h2 {
@@ -112,6 +129,7 @@ input{outline:none}
 	float:right;
 	width:88px;
 	height:28px;
+    margin-right: 28px;
 	background-position: -135px -156px;
 }
 .login-qrcode .login-qrcode-img {
@@ -136,7 +154,7 @@ input{outline:none}
 	margin-top:20px;
 	text-align:center;
 }
-.login-qrcode .login-qrcode-text span {
+.login-qrcode .login-qrcode-text a {
 	color:#ff591f;
 	font-size:16px;
 }
@@ -148,10 +166,10 @@ input{outline:none}
 	margin-left:67px;
 	margin-top:-203px;
 	background:rgba(255,255,255,0.9);
-
 	filter:Alpha(opacity=70); 
 }
 .login-qrcode .login-qrcode-mask > div {
+    position: relative;
     text-align: center;
     color:#666;
     font-size:14px;
@@ -225,17 +243,20 @@ input{outline:none}
 
 
 /* 用户名，密码位置*/
+.login-iscs > ul.login-user .login-user-username {
+    margin:10px 0;
+}
 .login-iscs > ul.login-user .login-user-username input ,.login-iscs > ul.login-user .login-user-password input {
 	width:100%;
-	height:44px;
-	line-height:44px;
-	font-size:14px;
+	height:34px;
+	line-height:34px;
+	font-size:16px;
 	color:#444;
 	border:0;
 	border-bottom:#dcdcdc solid 1px;
 }
 .login-iscs > ul.login-user .login-user-password {
-	margin-top:10px;
+	margin-top:15px;
 }
 
 .login-iscs > ul.login-user .login-pwd-forget {
@@ -636,3 +657,21 @@ input{outline:none}
     cursor:pointer; 
 }
 
+/* 修改placeholder */
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 14px;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 14px;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    font-size: 14px;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-size: 14px;
+}
