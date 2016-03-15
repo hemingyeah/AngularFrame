@@ -6,7 +6,7 @@ app
             Login: function() {
                 // LoginService.Login($scope, null, function(data) {
                 // 	if (data) {
-                $state.go("GT.Main");
+                $state.go("GT.Main.Tab");
                 // 	}
                 // });
             }

@@ -1,10 +1,10 @@
 <div>
-<!--     <a ui-sref="GT.GitManage.List">
-        <span>Git管理</span>
-    </a>
-    <a ui-sref="GT.Account.List">
-        <span>企业帐号管理</span>
-    </a> -->
+    <ul class="nav nav-tabs">
+        <li ng-repeat="tab in tabItems track by $index" role="presentation" class="active">
+            <i class="caret" ng-click="closeTab(tab, $index)"></i>
+            <a ng-bind="tab.menu" ng-click="ifShow(tab, $event)" ui-sref="wc.tab"></a>
+        </li>
+    </ul>
     <div ui-view class="fade-in-up" ng-init="app.Layout=true;" style="height:100%;">
         </div7>
     </div>

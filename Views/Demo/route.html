@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs">
+    <li ng-repeat="tab in tabItems track by $index" role="presentation" class="active">
+        <i class="glyphicon glyphicon-remove" ng-click="closeTab(tab, $index)"></i>
+        <a ng-bind="tab.Name" ng-click="ifShow(tab, $event)" style="display: block;"></a>
+    </li>
+</ul>
+<!-- <div ui-view="menu0" class="well"></div> -->
+<div ng-repeat="tab in tabItems track by $index" ng-show="tab.show">
+    <div ui-view="{{tab.view}}" class="well" style="min-height: 800px"></div>
+</div>

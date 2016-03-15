@@ -11,7 +11,7 @@ angular.module('app')
       isSmartDevice($window) && angular.element($window.document.body).addClass('smart');
       // config
       $scope.app = {
-        name: '‰∏âÁª¥‰ªªÂä°ÂçèÂêåÁ≥ªÁªü',
+        name: '»˝Œ¨»ŒŒÒ–≠Õ¨œµÕ≥',
         UserName: service.Cookie.Get("UserName"),
         GroupRelationName: service.Cookie.Get("GroupRelationName"),
         version: '1.3.3',
@@ -60,9 +60,9 @@ angular.module('app')
         isopen: false
       };
       $scope.langs = {
-        zh_CN: '‰∏≠ÊñáÁÆÄ‰Ωì'
+        zh_CN: '÷–ŒƒºÚÃÂ'
       };
-      $scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "ÁÆÄ‰Ωì‰∏≠Êñá";
+      $scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "ºÚÃÂ÷–Œƒ";
       $scope.setLang = function(langKey, $event) {
         // set the current lang
         $scope.selectLang = $scope.langs[langKey];
@@ -77,5 +77,46 @@ angular.module('app')
         // Checks for iOs, Android, Blackberry, Opera Mini, and Windows mobile devices
         return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
       }
-
+      /*∏ƒ‘ÏøÚº‹*/
+     $scope.id;
+            $scope.tabItems = [];
+            $scope.refresh;
+            $scope.model = {};
+            $scope.ifShow = function(data, evt) {
+                angular.forEach($scope.tabItems, function(obj, index) {
+                    obj.show = false;
+                })
+                data.show = true;
+                // $scope.refresh();
+            }
+            $scope.closeTab = function(data, index) {
+                $scope.tabItems.splice(index, 1);
+                angular.forEach($scope.tabItems, function(obj, index) {
+                    obj.show = false;
+                })
+                $scope.tabItems[--index].show = true;
+            }
+            $scope.addTab = function(data, evt) {
+                if ($.inArray(data, $scope.tabItems) === -1) {
+                    angular.forEach($scope.tabItems, function(obj, index) {
+                        obj.show = false;
+                    })
+                    data.show = true;
+                    $scope.tabItems.push(data);
+                };
+            }
+            $scope.refresh = function() {
+                $http({
+                    method: 'GET',
+                    url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+                    headers: {
+                        // SessionId: sessionStorage.getItem("SessionID")
+                    },
+                    params: '',
+                    data: ''
+                }).success(function(data) {
+                    $scope.model.test = data
+                }).error(function(data) {})
+            }
+      /*∏ƒ‘ÏøÚº‹*/
     });
