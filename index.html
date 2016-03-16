@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns:ng="http://angularjs.org" lang="zh_CN" id='data-ng-app' data-ng-app="app">
 
 <head>
@@ -138,12 +138,11 @@
     <script src="/Views/DataBaseManage/Script/DataBase_Service.js"></script>
     <script src="Views/ReportManage/Script/Report_Route.js"></script>
     <script src="/Views/ImportManage/Script/ImportManage_Route.js"></script>
-    <!--<script src="/Views/ZookeeperConfigManage/Script/ZookeeperConfig_Route.js"></script>
+    <script src="/Views/ZookeeperConfigManage/Script/ZookeeperConfig_Route.js"></script>
     -->
     <script src="/Views/ServerManage/Script/Server_Route.js"></script>
     <!--<script src="/Resources/scripts/Route.js"></script>
     -->
-    <script src="/Web/Route.js"></script>
     <script src="/node_modules/less-1.7.1.min.js"></script>
     <script>
     var intervalList = [];
@@ -214,27 +213,115 @@
         </ol>
     </script>
     <div class="pop alert alert-success"></div>
-
     <!-- demo模板文件 -->
-    <script type="text/ng-template" id="route1.html">
-        <h2>route1</h2>
-        <input type="text" ng-model="ctrl1.model.test">
+    <script type="text/ng-template" id="default_tpl.html">
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Hello, world!</h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
     </script>
-    <script type="text/ng-template" id="route2.html">
-        <h2>route2</h2>
-        <input type="text" ng-model="ctrl2.model.test">
+    <script type="text/ng-template" id="personalInfo_tpl.html">
+        <div class="hbox hbox-auto-xs hbox-auto-sm">
+            <div class="col w-lg bg-light dk b-r bg-auto">
+                <div class="wrapper-md dker b-b">
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="userSearchText" placeholder="Town State Country...">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="getLocations()">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- show search results for user input -->
+                <div class="wrapper-md">
+                    <ul class="list-group list-group-sp" ng-show="search.query.count > 1">
+                        <li class="list-group-item" ng-repeat="loc in search.query.results.place">
+                            <a class="clear text-ellipsis" ng-click="getWeather(loc.woeid, loc.name, loc.country.content)">{{loc.name}}, {{loc.admin1.content}}, {{loc.country.content}}</a>
+                        </li>
+                    </ul>
+                    <ul class="list-group list-group-sp">
+                        <li class="list-group-item">
+                            <a href ng-click="getWeather(2459115,'New York','United States')">New York</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href ng-click="getWeather(615702,'Paris','France')">Paris</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href ng-click="getWeather(44418,'London','United Kingdom')">London</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href ng-click="getWeather(1105779,'Sydney','Australia')">Sydney</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </script>
-    <script type="text/ng-template" id="route3.html">
-        <h2>route3</h2>
-        <input type="text" ng-model="ctrl3.model.test">
+    <script type="text/ng-template" id="baseInfo_tpl.html">
+        <h2>baseInfo_tpl</h2>
+        <input type="text" ng-model="baseInfo.model.test">
     </script>
-    <script type="text/ng-template" id="route4.html">
-        <h2>route4</h2>
-        <input type="text" ng-model="ctrl4.model.test">
+    <script type="text/ng-template" id="goodsInfo_tpl.html">
+        <h2>goodsInfo_tpl</h2>
+        <input type="text" ng-model="goodsInfo.model.test">
     </script>
-    <script type="text/ng-template" id="route5.html">
-        <h2>route5</h2>
-        <input type="text" ng-model="ctrl5.model.test">
+    <script type="text/ng-template" id="goodsKind_tpl.html">
+        <h2>goodsKind_tpl</h2>
+        <input type="text" ng-model="goodsKind.model.test">
+    </script>
+    <script type="text/ng-template" id="shopManage_tpl.html">
+        <h2>shopManage_tpl</h2>
+        <input type="text" ng-model="shopManage.model.test">
+    </script>
+    <script type="text/ng-template" id="disManage_tpl.html">
+        <h2>disManage_tpl</h2>
+        <input type="text" ng-model="disManage.model.test">
+    </script>
+    <script type="text/ng-template" id="orderSearch_tpl.html">
+        <h2>orderSearch_tpl</h2>
+        <input type="text" ng-model="orderSearch.model.test">
+    </script>
+    <script type="text/ng-template" id="orderHis_tpl.html">
+        <h2>orderHis_tpl</h2>
+        <input type="text" ng-model="orderHis.model.test">
+    </script>
+    <script type="text/ng-template" id="providerManage_tpl.html">
+        <h2>providerManage_tpl</h2>
+        <input type="text" ng-model="providerManage.model.test">
+    </script>
+    <script type="text/ng-template" id="repManage_tpl.html">
+        <h2>repManage_tpl</h2>
+        <input type="text" ng-model="repManage.model.test">
+    </script>
+    <script type="text/ng-template" id="stockSearch_tpl.html">
+        <h2>stockSearch_tpl</h2>
+        <input type="text" ng-model="stockSearch.model.test">
+    </script>
+    <script type="text/ng-template" id="stockManage_tpl.html">
+        <h2>stockManage_tpl</h2>
+        <input type="text" ng-model="stockManage.model.test">
     </script>
 </body>
 

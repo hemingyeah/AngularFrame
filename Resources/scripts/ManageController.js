@@ -145,95 +145,128 @@ app
                 })
                 .state('GT.Main.Tab', {
                     url: '/tab',
+                    controller: function($scope) {
+                        $scope.model = "hemingyeah"
+                    },
                     views: {
+                        "default": {
+                          "templateProvider": function($templateCache) {
+                              return $templateCache.get('default_tpl.html')
+                          },
+                          // "controller": "personalInfoCtrl as personalInfo"  
+                      },
                         "personalInfo": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route1.html')
+                                return $templateCache.get('personalInfo_tpl.html')
                             },
-                            "controller": "menu1Ctrl as ctrl1"
+                            "controller": "personalInfoCtrl as personalInfo"
                         },
                         "baseInfo": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route2.html')
+                                return $templateCache.get('baseInfo_tpl.html')
                             },
-                            "controller": "menu2Ctrl as ctrl2"
+                            "controller": "baseInfoCtrl as baseInfo"
                         },
                         "goodsInfo": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route3.html')
+                                return $templateCache.get('goodsInfo_tpl.html')
                             },
-                            "controller": "menu3Ctrl as ctrl3"
+                            "controller": "goodsInfoCtrl as goodsInfo"
                         },
                         "goodsKind": {
-                            "templateProvider": function($templateCache) {
-                                return $templateCache.get('route4.html')
+                            "templateProvider": function($templateCache) {          
+                                return $templateCache.get('goodsKind_tpl.html')
                             },
-                            "controller": "menu4Ctrl as ctrl4"
+                            "controller": "goodsKindCtrl as goodsKind"
                         },
                         "shopManage": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route5.html')
+                                return $templateCache.get('shopManage_tpl.html')
                             },
-                            "controller": "menu5Ctrl as ctrl5"
+                            "controller": "shopManageCtrl as shopManage"
                         },
                         "disManage": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route5.html')
+                                return $templateCache.get('disManage_tpl.html')
                             },
-                            "controller": "menu5Ctrl as ctrl5"
+                            "controller": "disManageCtrl as disManage"
                         },
                         "orderSearch": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route1.html')
+                                return $templateCache.get('orderSearch_tpl.html')
                             },
-                            "controller": "menu1Ctrl as ctrl1"
+                            "controller": "orderSearchCtrl as orderSearch"
                         },
                         "orderHis": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route2.html')
+                                return $templateCache.get('orderHis_tpl.html')
                             },
-                            "controller": "menu2Ctrl as ctrl2"
+                            "controller": "orderHisCtrl as orderHis"
                         },
                         "providerManage": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route3.html')
+                                return $templateCache.get('providerManage_tpl.html')
                             },
-                            "controller": "menu3Ctrl as ctrl3"
+                            "controller": "providerManageCtrl as providerManage"
                         },
                         "repManage": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route4.html')
+                                return $templateCache.get('repManage_tpl.html')
                             },
-                            "controller": "menu4Ctrl as ctrl4"
+                            "controller": "repManageCtrl as repManage"
                         },
                         "stockSearch": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route5.html')
+                                return $templateCache.get('stockSearch_tpl.html')
                             },
-                            "controller": "menu5Ctrl as ctrl5"
+                            "controller": "stockSearchCtrl as stockSearch"
                         },
                         "stockManage": {
                             "templateProvider": function($templateCache) {
-                                return $templateCache.get('route5.html')
+                                return $templateCache.get('stockManage_tpl.html')
                             },
-                            "controller": "menu5Ctrl as ctrl5"
+                            "controller": "stockManageCtrl as stockManage"
                         }
                     }
                 })
         }
     );
-app.controller('menu1Ctrl', ['$scope', function ($scope) {
+app.controller('personalInfoCtrl', ['$scope', function ($scope) {
+    // $scope.$watch('model.test', function(newVal, old) {
+    // })
+}])
+app.controller('baseInfoCtrl', ['$scope', function ($scope) {
     
 }])
-app.controller('menu2Ctrl', ['$scope', function ($scope) {
+app.controller('goodsInfoCtrl', ['$scope', function ($scope) {
     
 }])
-app.controller('menu3Ctrl', ['$scope', function ($scope) {
+app.controller('goodsKindCtrl', ['$scope', function ($scope) {
     
 }])
-app.controller('menu4Ctrl', ['$scope', function ($scope) {
+app.controller('shopManageCtrl', ['$scope', function ($scope) {
     
 }])
-app.controller('menu5Ctrl', ['$scope', function ($scope) {
+app.controller('disManageCtrl', ['$scope', function ($scope) {
     
 }])
+app.controller('orderSearchCtrl', ['$scope', function ($scope) {
+    
+}])
+app.controller('orderHisCtrl', ['$scope', function ($scope) {
+    
+}])
+app.controller('providerManageCtrl', ['$scope', function ($scope) {
+    
+}])
+app.controller('repManageCtrl', ['$scope', function ($scope) {
+    
+}])
+app.controller('stockSearchCtrl', ['$scope', function ($scope) {
+    
+}])
+app.controller('stockManageCtrl', ['$scope', function ($scope) {
+    
+}])
+
+
