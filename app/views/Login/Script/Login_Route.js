@@ -3,17 +3,17 @@ app
 		$stateProvider
 			.state("Login", {
 				url: '/Login',
-				templateUrl: 'Views/Login/Login.html',
+				templateUrl: 'views/Login/Login.html',
 				controller: 'LoginCtrl',
 				resolve: {
 					deps: ['$ocLazyLoad',
 						function($ocLazyLoad) {
 							return $ocLazyLoad.load([
-								'Views/Login/Script/Login_Controller.js',
-								'Views/Login/Script/Login_Service.js',
-								'Resources/scripts/switch.js',
-								'Resources/scripts/jquery.SuperSlide.2.1.1.js'
-								// 'Resources/scripts/login.js'
+								'views/Login/Script/Login_Controller.js',
+								'views/Login/Script/Login_Service.js',
+								'scripts/switch.js',
+								'scripts/jquery.SuperSlide.2.1.1.js'
+								// 'scripts/login.js'
 							]);
 						}
 					]
