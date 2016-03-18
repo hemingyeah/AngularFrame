@@ -10,7 +10,7 @@
 <ul class="nav nav-tabs tabDemo">
     <li ng-repeat="tab in tabItems track by $index" role="presentation">
         <i class="glyphicon glyphicon-remove" ng-click="closeTab(tab, $index)" ng-show="$index"></i>
-        <button class="btn btn-default" ng-bind="tab.Name" ng-click="ifShow(tab, $event)" style="display: block;"></button>
+        <button class="btn {{tab.class}}" ng-bind="tab.Name" ng-click="ifShow(tab, $event)" style="display: block;"></button>
     </li>
 </ul>
 <!-- <div ui-view="menu0" class="well"></div> -->
