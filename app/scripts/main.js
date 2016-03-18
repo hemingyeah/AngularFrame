@@ -81,31 +81,47 @@ angular.module('app')
             $scope.tabItems = [{
               Name: "首页",
               view: "default",
-              show: true
+              show: true,
+              class: 'btn-info'
             }];
             $scope.refresh;
             $scope.model = {};
             $scope.ifShow = function(data, evt) {
+                $(evt.target).siblings().removeClass('btn-info')
+                $(evt.target).addClass('btn-info');
                 angular.forEach($scope.tabItems, function(obj, index) {
                     obj.show = false;
+                    obj.class = "";
                 })
                 data.show = true;
+                data.class = 'btn-info'
                 // $scope.refresh();
             }
             $scope.closeTab = function(data, index) {
                 $scope.tabItems.splice(index, 1);
                 angular.forEach($scope.tabItems, function(obj, index) {
                     obj.show = false;
+                    obj.class = "";
                 })
                 $scope.tabItems[0].show = true;
+                $scope.tabItems[0].class = 'btn-info';
             }
             $scope.addTab = function(data, evt) {
                 if ($.inArray(data, $scope.tabItems) === -1) {
                     angular.forEach($scope.tabItems, function(obj, index) {
                         obj.show = false;
+                        obj.class = "";
                     })
                     data.show = true;
+                    data.class = "btn-info"
                     $scope.tabItems.push(data);
+                } else {
+                    angular.forEach($scope.tabItems, function(obj, index) {
+                        obj.show = false;
+                        obj.class = "";
+                    })
+                    data.show = true;
+                    data.class = "btn-info"
                 };
             }
             $scope.refresh = function() {
