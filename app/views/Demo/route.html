@@ -1,12 +1,4 @@
-<style>
-	.tabDemo li{
-		background: #F6F6F6;
-	}
-	.tabDemo li i{
-		position: absolute;
-		display: block;
-	}
-</style>
+
 <ul class="nav nav-tabs tabDemo">
     <li ng-repeat="tab in tabItems track by $index" role="presentation">
         <i class="glyphicon glyphicon-remove" ng-click="closeTab(tab, $index)" ng-show="$index"></i>
