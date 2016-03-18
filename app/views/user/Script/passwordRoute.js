@@ -9,11 +9,11 @@ app
 					deps: ['$ocLazyLoad',
 						function($ocLazyLoad) {
 							return $ocLazyLoad.load([
-								'views/login/script/loginController.js',
-								'views/login/script/loginService.js',
-								'scripts/switch.js',
-								'scripts/jquery.SuperSlide.2.1.1.js'
-								// 'scripts/login.js'
+								'views/user/script/passwordController.js',
+								'views/user/script/passwordService.js',
+                                'styles/user/drag.css',
+                                'views/user/script/drag.js',
+                                'views/user/script/passWordCall.js'
 							]);
 						}
 					]
@@ -27,10 +27,10 @@ app
 					deps: ['$ocLazyLoad',
 						function($ocLazyLoad) {
 							return $ocLazyLoad.load([
-								'views/login/script/loginController.js',
-								'views/login/script/loginService.js',
-								'scripts/switch.js',
-								'scripts/jquery.SuperSlide.2.1.1.js'
+								'views/user/script/passwordController.js',
+								// 'views/user/script/passwordService.js',
+                                
+								// 'views/user/script/passWordCall.js'
 								// 'scripts/login.js'
 							]);
 						}
