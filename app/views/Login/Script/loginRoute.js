@@ -9,10 +9,12 @@ app
 					deps: ['$ocLazyLoad',
 						function($ocLazyLoad) {
 							return $ocLazyLoad.load([
+                                'styles/user/loginIn.css',
 								'views/login/script/loginController.js',
 								'views/login/script/loginService.js',
 								'scripts/switch.js',
-								'scripts/jquery.SuperSlide.2.1.1.js',
+								'scripts/jquery.SuperSlide.2.1.1.js'
+                                
 								// 'scripts/login.js'
 							]);
 						}
