@@ -1,10 +1,10 @@
 app
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 		$stateProvider
-			.state("login", {
-				url: '/login',
-				templateUrl: 'views/login/login.html',
-				controller: 'LoginCtrl',
+			.state("passwordcall", {
+				url: '/passwordcall',
+				templateUrl: 'views/user/passwordcall.html',
+				controller: 'passWordCallCtrl',
 				resolve: {
 					deps: ['$ocLazyLoad',
 						function($ocLazyLoad) {
@@ -19,5 +19,4 @@ app
 					]
 				}
 			})
-            .stae
 	}]);

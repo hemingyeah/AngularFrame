@@ -1,0 +1,674 @@
+@charset "utf-8";
+/* CSS Document */
+body,nav,span,p,var,em,strong,a,h1,h2,h3,h4,h5,input,textarea,ul,ol,li,img{margin:0; padding:0; font-size:14px; font-family:"微软雅黑";}
+.clear{clear:both;height:0;overflow:hidden;}
+a img{border:none;}
+a{text-decoration:none; cursor:pointer;}
+var,em{font-style:normal;}
+ul,ol{list-style-type:none;}
+input{outline:none} 
+body { background:#fff;}
+/* page icon*/
+.login-logo , .login-checkbox  span ,.login-user-qrcode ,.login-user-tip ,.login-taobao span ,.login-page header > div , ul.login-user .login-user-err-icon ,.login-user-tip-icon ,
+.login-qrcode-pc ,.login-qrcode-tip ,.login-qrcode-mask span ,.login-page-qrcode header > div ,.login-page-qrcode-log > i ,.callPwd-page header .callPwd-header-logo ,.callPwd-page header ,
+.callPwd-header-log i ,.callPwd-from-tip-remind i ,.callPwd-from-tip-error i {
+	background:url(../../images/icon_login.png) no-repeat;
+}
+
+@orange :#ff591f;
+@orange-hover :#ff6732;
+@orange-active :#e8511c;
+/* page icon */
+
+.login-page header {
+    height:80px;
+	padding-top:20px;
+    display: block;
+}
+.login-page header > div {
+	width:1000px;
+	margin:0 auto;
+	height:36px;
+	background-position: 0 0;
+}
+.login-page footer ,.login-page-qrcode footer {
+    height:70px;
+    display: block;
+}
+.login-page footer div ,.login-page-qrcode footer div {
+	width:1000px;
+	margin:0 auto;
+	font-size:12px;
+	color:#666;
+	text-align:center;
+	padding:25px 0;
+}
+.login-page aside {
+	width:1000px;
+	margin:0 auto;
+}
+.login-page .login-main {
+	height:600px;
+	overflow:hidden;
+}
+
+.login-page aside .login-iscs {
+    width:380px;
+	min-height:370px;
+	border:solid 4px rgba(0,0,0,0.05);
+    border-radius: 2px;
+	float:right;
+	position:relative;
+	top:-490px;
+}
+/* 登录窗口 */
+.login-page aside .login-iscs > ul {
+	background:#fff;
+    border-radius: 2px;
+	min-height:370px;
+	padding:32px 35px;
+}
+.login-iscs > ul.login-qrcode {
+	display:none;
+}
+.login-iscs > ul.login-user h2 {
+	height:30px;
+	line-height:30px;
+	font-size:18px;
+	font-weight: bold;
+	color:#646464;
+}
+.login-user-qrcode {
+	float:right;
+	width:28px;
+	height:28px;
+	display:block;
+	background-position: 0 -46px;
+    transition: background-position .2s cubic-bezier(0.25,0,1,0);
+}
+/*.login-user-qrcode:hover {
+	background-position: -38px -46px;
+}*/
+.login-user-qrcode.avce {
+	background-position: -38px -46px;
+}
+/*.login-user-qrcode.avce:hover {
+	background-position: -114px -46px;
+}*/
+.login-iscs > ul.login-user .login-user-tip {
+	float:right;
+	width:128px;
+	height:28px;
+    margin-right: 28px;
+	background-position: 0 -156px;
+}
+.login-user-qrcode-main {
+    position: absolute;
+    right:0;
+    top:0;
+    width: 28px;
+    height:28px;
+    display: block;
+    margin:32px 35px 0 0;
+    z-index: 999;
+}
+/*qrcode 二维码界面*/
+.login-iscs > ul.login-qrcode h2 {
+	height:30px;
+	line-height:30px;
+	font-size:18px;
+	font-weight: bold;
+	color:@orange;
+}
+.login-qrcode .login-qrcode-pc {
+	float:right;
+	width:28px;
+	height:28px;
+	display:block;
+	background-position: -76px -46px;
+}
+.login-qrcode .login-qrcode-pc:hover {
+	background-position: -114px -46px;
+}
+.login-qrcode .login-qrcode-tip {
+	float:right;
+	width:88px;
+	height:28px;
+    margin-right: 28px;
+	background-position: -135px -156px;
+}
+.login-qrcode .login-qrcode-img {
+	width:162px;
+	height:162px;
+	padding:10px;
+	display:block;
+	border:#dcdcdc solid 1px;
+	margin:0 auto;
+	margin-top:44px;
+}
+.login-qrcode .login-qrcode-img .qrcode-img  {
+	width:140px;
+	height:140px;
+	display:block;
+}
+.login-qrcode .login-qrcode-text {
+	height:20px;
+	line-height:20px;
+	color:#999;
+	font-size:16px;
+	margin-top:20px;
+	text-align:center;
+}
+.login-qrcode .login-qrcode-text a {
+	color:@orange;
+	font-size:16px;
+}
+.login-qrcode .login-qrcode-mask {
+	position:absolute;
+	width:170px;
+	height:170px;
+	display:block;
+	margin-left:67px;
+	margin-top:-203px;
+	background:rgba(255,255,255,0.9);
+	filter:Alpha(opacity=70); 
+}
+.login-qrcode .login-qrcode-mask > div {
+    position: relative;
+    text-align: center;
+    color:#666;
+    font-size:14px;
+    margin-top:10px;
+}
+.login-qrcode .login-qrcode-mask span {
+	width:50px;
+	height:50px;
+	display:block;
+	background-position: -38px -75px;
+	background-color:@orange;
+	border-radius:50%;
+	position:relative;
+	margin:46px 0 0 62px;
+}
+.login-qrcode .login-qrcode-mask span:hover {
+	background-color:@orange-hover;
+} 
+.login-qrcode .login-qrcode-mask span:active {
+	background-color:@orange-active;
+} 
+/* 报错位置*/
+.login-iscs > ul.login-user .login-user-err {
+	height:34px;
+	display:block;
+	padding-top:5px;
+}
+.login-iscs > ul.login-user .login-user-err-main {
+	border:1px solid #ffa7a7;
+	background:#ffe6e6;
+	height:28px;
+	line-height:12px;
+	padding:6px;
+	display:none;
+}
+.login-iscs > ul.login-user .login-user-err-text {
+	float:left;
+	font-size:12px;
+	color:#ff2121;
+}
+.login-iscs > ul.login-user .login-user-err-icon {
+	width:12px;
+	height:12px;
+	float:left;
+	display:block;
+	background-position: -22px -84px;
+	margin-right:5px;
+}
+/* 提醒报错位置*/
+.login-iscs > ul.login-user .login-user-tip-main {
+	border:1px solid #ffd5a4;
+	background:#faebda;
+	height:28px;
+	line-height:12px;
+	padding:6px;
+	display:none;
+}
+.login-iscs > ul.login-user .login-user-tip-text {
+	float:left;
+	font-size:12px;
+	color:#534c4a;
+}
+.login-iscs > ul.login-user .login-user-tip-icon {
+	width:12px;
+	height:12px;
+	float:left;
+	display:block;
+	background-position: 0 -84px;
+	margin-right:5px;
+}
+
+
+/* 用户名，密码位置*/
+.login-iscs > ul.login-user .login-user-username {
+    margin:10px 0;
+}
+.login-iscs > ul.login-user .login-user-username input ,.login-iscs > ul.login-user .login-user-password input {
+	width:100%;
+	height:34px;
+	line-height:34px;
+	font-size:16px;
+	color:#444;
+	border:0;
+	border-bottom:#dcdcdc solid 1px;
+}
+.login-iscs > ul.login-user .login-user-password {
+	margin-top:15px;
+}
+
+.login-iscs > ul.login-user .login-pwd-forget {
+	height:24px;
+	line-height:24px;
+	color:#777;
+	margin:19px 0;
+	font-size:12px;
+}
+.login-iscs > ul.login-user .login-pwd-forget  a {
+	float:right;
+	color:#777;
+	font-size:12px;
+}
+.login-iscs > ul.login-user .login-pwd-forget  a:hover ,.login-iscs > ul.login-user .login-checkbox:hover {
+	color:#333;
+}
+.login-iscs > ul.login-user .login-checkbox {
+	float:left;
+}
+.login-iscs > ul.login-user .login-checkbox  span {
+	width:14px;
+	height:14px;
+	float:left;
+	display:block;
+	margin:6px 10px 0 0;
+	background-position: 0 -132px;
+}
+.login-iscs > ul.login-user .login-checkbox span:hover {
+	background-position: -24px -132px;
+}
+.login-iscs > ul.login-user .login-checkbox span.active {
+	background-position: -48px -132px;
+}
+/* 登录按钮位置*/
+.login-iscs > ul.login-user .login-user-submit {
+    color:#fff;
+	background:@orange;
+    border-radius: 2px;
+    font-size:18px;
+    height:42px;
+	line-height:42px;
+    text-align:center;
+}
+.login-iscs > ul.login-user .login-user-submit:hover {
+	background:@orange-hover;
+}
+.login-iscs > ul.login-user .login-user-submit:active {
+	background:@orange-active;
+}
+
+.login-iscs > ul.login-user .login-taobao {
+	height:30px;
+	border-bottom:#dcdcdc solid 1px;
+}
+.login-iscs > ul.login-user .login-taobao a {
+	position:relative;
+	display:block;
+	width:130px;
+	padding-left:30px;
+	left:30%;
+	top:21px;
+	background:#fff;
+	color:#777;
+	font-size:12px;
+}
+.login-iscs > ul.login-user .login-taobao span {
+	width:18px;
+	height:18px;
+	float:left;
+	display:block;
+	background-position: 0 -105px;
+}
+
+/* login-qrcode */
+.login-page-qrcode-header {
+    height:80px;
+	padding-top:20px;
+    display: block;
+}
+.login-page-qrcode-header > div {
+	width:1000px;
+	margin:0 auto;
+	height:36px;
+	background-position: 0 0;
+}
+.login-page-qrcode-log {
+    float: right;
+    padding-top: 15px;
+}
+.login-page-qrcode-log > i {
+    background-position: -122px -83px; 
+    width:16px;
+    height:18px;
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+.login-page-qrcode-log > a {
+    color:#555;
+    display: inline-block;
+}
+.login-page-qrcode-log > a:hover {
+    color:#444;
+}
+.login-page-qrcode .login-qrcode-main {
+    background: url(../../images/loginqrcode.png) center top no-repeat #0893EE;
+    height: 670px;
+}
+.login-page-qrcode .login-qrcode-main article {
+    text-align: center;
+    font-size: 12px;
+    color: #5cacf1;
+    margin-top: 140px;
+}
+.login-page-qrcode .qrcode-page-cen {
+    width:1000px;
+	margin:0 auto;
+    padding-top: 375px;
+}
+.login-page-qrcode .qrcode-page-img ,.login-page-qrcode .qrcode-page-imgf {
+    display: inline-block;
+    border: 6px solid #fff;
+    margin-left: 35px;
+    border-radius:2px;
+}
+.login-page-qrcode .qrcode-page-imgf {
+    margin-left: 470px !important;
+}
+
+
+
+
+
+
+/******************* 密码找回页面 pwdcall ********************/
+
+.callPwd-page header {
+    height: 100px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #e6e6e6;
+    
+    > div {
+        width: 1000px;
+        margin: 0 auto;
+        padding-top:30px;
+        .callPwd-header-logo {
+             width:105px;
+             height: 44px;
+             display: block;
+             float:left;
+             background-position: 0 0;
+        }
+        .callPwd-header-test {
+            font-size: 28px;
+            color: #444;
+            display: block;
+            float:left;
+        }
+        .callPwd-header-log {
+            float: right;
+            padding-top: 7px;
+        > i {
+            background-position: -122px -83px; 
+            width:16px;
+            height:18px;
+            display: block;
+            margin:2px 5px 0 0;
+            float: left;
+            
+            }
+         > a {
+             color:#666;
+             font-size:14px;
+         }
+         > a:hover {
+             color:#555;
+         }
+        }
+    }
+}
+
+.callPwd-main {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top:100px;
+    .callPwd-steps {
+        border-top: 3px solid #dcdcdc;
+        width:780px;
+        height:100px;
+        margin: 0 auto;
+        position: relative;
+        .callPwd-steps-list {
+            position: absolute;
+            width: 100px;
+            top:-18px;
+            .garden {
+                width:32px;
+                height:32px;
+                line-height: 32px;
+                text-align: center;
+                border-radius: 50%;
+                background: #dcdcdc;
+                margin: 0 auto;
+                font-size: 16px;
+                color: #fff;
+            }
+            .callPwd-steps-test {
+                text-align: center;
+                color: #999;
+                font-size: 14px;
+                padding-top: 10px;
+            }
+        }
+        .callPwd-steps-list.orange {
+            .garden {
+                background: @orange;
+            }
+            .callPwd-steps-test {
+                color: @orange;
+            }
+        }
+    }
+    .callPwd-from {
+        padding-left:96px;
+        .callPwd-from-test {
+            font-size: 12px;
+            color: #666;
+            padding-left: 96px;
+        }
+        .callPwd-from-account {
+            height:40px;
+            display: teble;
+            .callPwd-from-succ-img {
+                width:100px;
+                float: left;
+                margin-left:260px;
+            }
+            .callPwd-from-succ-font {
+                float: left;
+                margin-left:10px;
+                padding-top:10px;
+                h2 {
+                    color: @orange;
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+                p {
+                    color: #666;
+                    line-height: 36px;
+                }
+                a {
+                    color: @orange;
+                }
+            }
+            .callPwd-from-font {
+                width:140px;
+                height:40px;
+                line-height:40px;
+                float: left;
+                text-align: right;
+            }
+            .callPwd-from-input {
+                width:260px;
+                float: left;
+                > input {
+                    width:100%;
+                    height:40px;
+                    line-height:40px;
+                    font-size:16px;
+                    color:#444;
+                    padding-left: 10px;
+                    border:#dcdcdc solid 1px;
+                }
+                > input.error {
+                    border-color: #ffa7a7;
+                    background: #ffe6e6;
+                }
+            }
+            .callPwd-from-tip {
+                width:300px;
+                float: left;
+                .validate-phone {
+                    border-color:#dcdcdc;
+                    background-color: #fafafa;
+                    color:#bababa;
+                    cursor: default;
+                }
+                .callPwd-from-tip-remind {
+                    display: none;
+                    margin-top: 9px;
+                    span {
+                        color: #999;
+                        font-size: 12px;
+                    }
+                    i {
+                        width: 14px;
+                        height: 14px;
+                        display: block;
+                        float: left;
+                        margin: 3px 5px 0 10px;
+                        background-position: 0 -82px;
+                    }
+                }
+                .callPwd-from-tip-error {
+                    display: none;
+                    margin-top: 9px;
+                    span {
+                        color: #ff2121;
+                        font-size: 12px;
+                    }
+                    i {
+                        width: 14px;
+                        height: 14px;
+                        display: block;
+                        float: left;
+                        margin: 3px 5px 0 10px;
+                        background-position: -21px -82px;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
+.callPwd-page footer {
+    width: 100%;
+    height:70px;
+    position: fixed;
+    bottom: 0px;
+    display: block;
+    div {
+        width:1000px;
+        margin:0 auto;
+        font-size:12px;
+        color:#666;
+        text-align:center;
+        padding:25px 0;
+    }
+}
+/*提交按钮*/
+.btn-submit {
+    width: 120px;
+    height: 36px;
+    font-size: 16px;
+    color: #fff;
+    background: @orange;
+    text-align: center;
+    border: 0;
+    text-shadow:none;
+    &:hover {
+        background:@orange-hover;
+    }
+    &:active {
+        background:@orange-active;
+    }
+}
+.btn-second {
+    padding: 0 10px;
+    height: 40px;
+    font-size: 14px;
+    color: @orange;
+    background: #ffece6;
+    border: 1px solid @orange;
+    text-align: center;
+    text-shadow:none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************* 密码找回END pwdcall ********************/
+.cursor {
+    cursor:pointer; 
+}
+
+/* 修改placeholder */
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 14px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 14px;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    font-size: 14px;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-size: 14px;
+}

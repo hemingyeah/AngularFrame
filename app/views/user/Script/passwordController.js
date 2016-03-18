@@ -1,5 +1,5 @@
 app
-    .controller('LoginCtrl', function($scope, LoginService, $state, service) {
+    .controller('passWordCall', function($scope, LoginService, $state, service) {
         $scope.app.settings.headerFixed = false;
         $scope.app.name = document.title = "网仓3号";
         $scope.event = {
