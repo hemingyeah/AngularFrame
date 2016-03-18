@@ -3,7 +3,7 @@
         "Home": "首页",
         "Deptment": "表单-选择用户",
         "Person": "人员选择",
-        "Head": "基础管理",
+        "Head": "dsaf",
         "GroupUser": {
             "Name": "人员群组管理",
             "GroupUserManage": "人组管理",

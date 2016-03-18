@@ -18,8 +18,7 @@ var app = angular.module('app', [
     'ImageCropper'
 ]);
 console.log('test')
-var state =
-{
+var state = {
     Add: {
         Value: "Add",
         Name: "添加"
@@ -36,7 +35,7 @@ var state =
 
 var guid = { Empty: "00000000-0000-0000-0000-000000000000" };
 var common = {
-    getItemById: function (array, id) {
+    getItemById: function(array, id) {
         for (var obj in array) {
             if (array[obj].Id === id) {
                 return array[obj];
@@ -44,7 +43,7 @@ var common = {
         }
         return {};
     },
-    constructor: function (service, data) {
+    constructor: function(service, data) {
         var userId = service.Cookie.Get("UserID");
         var userName = service.Cookie.Get("UserName");
         var appId = service.Cookie.Get("AppID");
@@ -64,7 +63,7 @@ var common = {
         });
         return data;
     },
-    buildGuid: function () {
+    buildGuid: function() {
         var s = [];
         var hexDigits = "0123456789abcdef";
         for (var i = 0; i < 36; i++) {
@@ -79,19 +78,11 @@ var common = {
     }
 }
 angular.module('app')
-	.run(
-		['$rootScope', '$state', '$stateParams',
-			function ($rootScope, $state, $stateParams) {
-			    $rootScope.$state = $state;
-			    $rootScope.$stateParams = $stateParams;
-			}
-		]
-	)
-	.config(
-		['$stateProvider', '$urlRouterProvider',
-			function ($stateProvider, $urlRouterProvider) {
-			    $urlRouterProvider
-					.otherwise('/Login');
-			}
-		]
-	);
+    .run(
+        ['$rootScope', '$state', '$stateParams',
+            function($rootScope, $state, $stateParams) {
+                $rootScope.$state = $state;
+                $rootScope.$stateParams = $stateParams;
+            }
+        ]
+    )

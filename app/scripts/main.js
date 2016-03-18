@@ -10,7 +10,7 @@ angular.module('app')
             isSmartDevice($window) && angular.element($window.document.body).addClass('smart');
             // config
             $scope.app = {
-                name: 'ÈıÎ¬ÈÎÎñĞ­Í¬ÏµÍ³',
+                name: 'ç½‘ä»“3å·',
                 UserName: service.Cookie.Get("UserName"),
                 GroupRelationName: service.Cookie.Get("GroupRelationName"),
                 version: '1.3.3',
@@ -59,9 +59,9 @@ angular.module('app')
                 isopen: false
             };
             $scope.langs = {
-                zh_CN: 'ÖĞÎÄ¼òÌå'
+                zh_CN: 'ä¸­æ–‡ç®€ä½“'
             };
-            $scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "¼òÌåÖĞÎÄ";
+            $scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "ç®€ä½“ä¸­æ–‡";
             $scope.setLang = function(langKey, $event) {
                 // set the current lang
                 $scope.selectLang = $scope.langs[langKey];
@@ -76,10 +76,10 @@ angular.module('app')
                 // Checks for iOs, Android, Blackberry, Opera Mini, and Windows mobile devices
                 return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
             }
-            /*¸ÄÔì¿ò¼Ü*/
+            /*æ”¹é€ æ¡†æ¶*/
             $scope.id;
             $scope.tabItems = [{
-              Name: "default",
+              Name: "é¦–é¡µ",
               view: "default",
               show: true
             }];
@@ -121,5 +121,5 @@ angular.module('app')
                         $scope.model.test = data
                     }).error(function(data) {})
                 }
-                /*¸ÄÔì¿ò¼Ü*/
+                /*æ”¹é€ æ¡†æ¶*/
         });

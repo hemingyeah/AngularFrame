@@ -1,0 +1,23 @@
+<ul class="nav gtnav">
+    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+        <span>基础管理</span>
+        <!-- <span translate="Base.Head"></span> -->
+    </li>
+    <li ng-repeat="menu in MenuList">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <i class="glyphicon glyphicon-th-large icon text-success"></i>
+            <span ng-bind="menu.Name"></span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active" ng-repeat="Child in menu.ChildMenu">
+                <a>
+                    <span ng-bind="Child.Name" ng-click="addTab(Child, $event)"></span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

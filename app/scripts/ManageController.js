@@ -1,48 +1,13 @@
 // 'use strict';
 app
-    .run(
-        function($rootScope, $state, $stateParams, service) {
-            ajaxCount = 0;
-            // $rootScope.open = function($event) {
-            //     $event.preventDefault();
-            //     $event.stopPropagation();
-            //     $rootScope.opened = true;
-            // };
-            // $rootScope.opened = false;
-            // $rootScope.dateOptions = {
-            //     formatYear: 'yy',
-            //     startingDay: 1,
-            //     class: 'datepicker'
-            // };
-            $rootScope.Page = {
-                    Index: 1,
-                    Count: 1
-                }
-                // var RouteHead = "http://192.168.4.24/gaeaapi/Config/";
-                // service.http.asyncajax({
-                //     url: RouteHead + "GetColumnConfig?appId=&groupRelationId=",
-                //     type: "get",
-                //     dataType: "json",
-                //     success: function(data) {
-                //         GridColumnList = data;
-                //         $rootScope.GridColumnList = GridColumnList;
-                //     }
-                // })
-                // service.http.asyncajax({
-                //     type: "get",
-                //     url: RouteHead + 'GetRoutConfig',
-                //     success: function(data) {
-                //         Route = data;
-                //     }
-                // });
-        }
-    )
     .config(
         function($stateProvider, $urlRouterProvider) {
+            $urlRouterProvider
+                .otherwise('/login');
             $stateProvider
-                .state('GT', {
+                .state('iscs', {
                     abstract: true,
-                    url: '/GT',
+                    url: '/iscs',
                     templateUrl: 'views/index.html',
                     // resolve: {
                     //     deps: ['$ocLazyLoad',
@@ -126,35 +91,25 @@ app
                                 show: false
                             }]
                         }];
-                        // AppService.GetAppDetail($scope, {}, function(data) {
-                        //     $scope.app.name = document.title = data ? data.AppName : "中国产业互联网";
-                        // })
-                        // if (!service.Cookie.Get("UserName")) {
-                        //     $state.go("Login");
-                        // }
-                        // PowerService.LoadUserOperationPermissions($scope, {}, function(data) {
-                        //     $scope.MenuList = data.Permissions;
-                        // });
-                        // $scope.GridColumnList = GridColumnList;
                     }
                 })
-                .state('GT.Main', {
-                    url: '/Main',
+                .state('iscs.main', {
+                    url: '/main',
                     abstract: true,
                     templateUrl: "views/demo/route.html"
                 })
-                .state('GT.Main.Tab', {
+                .state('iscs.main.tab', {
                     url: '/tab',
                     controller: function($scope) {
                         $scope.model = "hemingyeah"
                     },
                     views: {
                         "default": {
-                          "templateProvider": function($templateCache) {
-                              return $templateCache.get('default_tpl.html')
-                          },
-                          // "controller": "personalInfoCtrl as personalInfo"  
-                      },
+                            "templateProvider": function($templateCache) {
+                                return $templateCache.get('default_tpl.html')
+                            },
+                            // "controller": "personalInfoCtrl as personalInfo"  
+                        },
                         "personalInfo": {
                             "templateProvider": function($templateCache) {
                                 return $templateCache.get('personalInfo_tpl.html')
@@ -174,7 +129,7 @@ app
                             "controller": "goodsInfoCtrl as goodsInfo"
                         },
                         "goodsKind": {
-                            "templateProvider": function($templateCache) {          
+                            "templateProvider": function($templateCache) {
                                 return $templateCache.get('goodsKind_tpl.html')
                             },
                             "controller": "goodsKindCtrl as goodsKind"
@@ -231,42 +186,40 @@ app
                 })
         }
     );
-app.controller('personalInfoCtrl', ['$scope', function ($scope) {
+app.controller('personalInfoCtrl', ['$scope', function($scope) {
     // $scope.$watch('model.test', function(newVal, old) {
     // })
 }])
-app.controller('baseInfoCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('goodsInfoCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('goodsKindCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('shopManageCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('disManageCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('orderSearchCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('orderHisCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('providerManageCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('repManageCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('stockSearchCtrl', ['$scope', function ($scope) {
-    
-}])
-app.controller('stockManageCtrl', ['$scope', function ($scope) {
-    
-}])
+app.controller('baseInfoCtrl', ['$scope', function($scope) {
 
+}])
+app.controller('goodsInfoCtrl', ['$scope', function($scope) {
 
+}])
+app.controller('goodsKindCtrl', ['$scope', function($scope) {
+
+}])
+app.controller('shopManageCtrl', ['$scope', function($scope) {
+
+}])
+app.controller('disManageCtrl', ['$scope', function($scope) {
+
+}])
+app.controller('orderSearchCtrl', ['$scope', function($scope) {
+
+}])
+app.controller('orderHisCtrl', ['$scope', function($scope) {
+
+}])
+app.controller('providerManageCtrl', ['$scope', function($scope) {
+
+}])
+app.controller('repManageCtrl', ['$scope', function($scope) {
+
+}])
+app.controller('stockSearchCtrl', ['$scope', function($scope) {
+
+}])
+app.controller('stockManageCtrl', ['$scope', function($scope) {
+
+}])
