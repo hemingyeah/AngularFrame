@@ -12,8 +12,7 @@ app.controller('passWordCallCtrl', ['$scope', '$state', 'service',function($scop
                     }else{
                         //验证透过否
                         if($(".handler_ok_bg").is(':visible')){
-                            debugger
-                            $state.go("passwordRoute");
+                            $state.go("passwordPhone");
                         }else{
                             $(".callPwd-from-tip-error ").show();
                             $("input[name=uid]").addClass('error');
@@ -25,7 +24,7 @@ app.controller('passWordCallCtrl', ['$scope', '$state', 'service',function($scop
             }
         }
 
-    }])
+    }]);
    app.controller('passwordPhoneCtrl', function($scope, $state, service) {
         $scope.event = {
             Login: function() {
