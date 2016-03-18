@@ -9,14 +9,14 @@
     <link rel="Shortcut Icon" href='favicon.ico' type="image/x-icon">
     <link rel="stylesheet" href="styles/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="styles/animate.css" type="text/css" />
-    <link rel="stylesheet" href="styles/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="fonts/font-awesome.css" type="text/css" />
     <link rel="stylesheet" href="styles/simple-line-icons.css" type="text/css" />
-    <link rel="stylesheet" href="styles/font.css" type="text/css" />
+    <link rel="stylesheet" href="fonts/font.css" type="text/css" />
     <link rel="stylesheet" href="styles/app.css" type="text/css" />
     <!-- 网仓登陆页面样式 11-->
     <link rel="stylesheet" href="styles/AdminLTE.css">
     <link rel="stylesheet" href="styles/login.css">
-</head>
+</head>fonts
 
 <body ng-controller="AppCtrl">
     <div class='loading'>
@@ -147,7 +147,6 @@
             s[14] = "4"; // bits 12-15 of the time_hi_and_version field to 0010
             s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
             s[8] = s[13] = s[18] = s[23] = "-";
-
             var uuid = s.join("");
             return uuid;
         }
