@@ -91,7 +91,7 @@ angular.module('app')
                 $(evt.target).addClass('btn-info');
                 angular.forEach($scope.tabItems, function(obj, index) {
                     obj.show = false;
-                    obj.class = "";
+                    obj.class = "btn-default";
                 })
                 data.show = true;
                 data.class = 'btn-info'
@@ -101,7 +101,7 @@ angular.module('app')
                 $scope.tabItems.splice(index, 1);
                 angular.forEach($scope.tabItems, function(obj, index) {
                     obj.show = false;
-                    obj.class = "";
+                    obj.class = "btn-default";
                 })
                 $scope.tabItems[0].show = true;
                 $scope.tabItems[0].class = 'btn-info';
@@ -110,7 +110,7 @@ angular.module('app')
                 if ($.inArray(data, $scope.tabItems) === -1) {
                     angular.forEach($scope.tabItems, function(obj, index) {
                         obj.show = false;
-                        obj.class = "";
+                        obj.class = "btn-default";
                     })
                     data.show = true;
                     data.class = "btn-info"
@@ -118,7 +118,7 @@ angular.module('app')
                 } else {
                     angular.forEach($scope.tabItems, function(obj, index) {
                         obj.show = false;
-                        obj.class = "";
+                        obj.class = "btn-default";
                     })
                     data.show = true;
                     data.class = "btn-info"
