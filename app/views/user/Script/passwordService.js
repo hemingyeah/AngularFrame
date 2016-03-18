@@ -1,5 +1,5 @@
 app
-	.factory('passWwordService', function ($http, service, DataOperate) {
+	.factory('passwordService', function ($http, service, DataOperate) {
 	    var ret = {
 	        Login: function ($scope, data, fun) {
 	            DataOperate.LoadData(Route.CompanyLogin_CompanyAccountLogin, {
