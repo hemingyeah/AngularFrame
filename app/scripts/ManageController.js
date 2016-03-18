@@ -9,19 +9,6 @@ app
                     abstract: true,
                     url: '/iscs',
                     templateUrl: 'views/index.html',
-                    // resolve: {
-                    //     deps: ['$ocLazyLoad',
-                    //         function($ocLazyLoad) {
-                    //             return $ocLazyLoad.load("ui.select").then(function() {
-                    //                 return $ocLazyLoad.load([
-                    //                     'views/PowerManage/Script/Power_Service.js',
-                    //                     'views/AppManage/Script/App_Service.js',
-                    //                     'views/DataBaseManage/Script/DataBase_Service.js'
-                    //                 ]);
-                    //             });
-                    //         }
-                    //     ]
-                    // },
                     controller: function($scope, $state, service) {
                         //获取菜单数据
                         $scope.MenuList = [{
@@ -229,7 +216,46 @@ app.controller('providerManageCtrl', ['$scope', function($scope) {
 app.controller('repManageCtrl', ['$scope', function($scope) {
 
 }])
-app.controller('stockSearchCtrl', ['$scope', function($scope) {
+//总库存查询
+app.controller('stockSearchCtrl', ['$scope', 'manageService', function($scope, manageServiceb    ) {
+    manageService.dataGridInit($scope);
+    $scope.columnDefs = $scope.columnDefs.concat(
+        [{
+            headerName: "主题",
+            field: "Title",
+            width: 300,
+            filter: "text",
+            filterParams: {
+                apply: true
+            }
+        }, {
+            headerName: "来源",
+            field: "Source",
+            width: 200
+        }, {
+            headerName: "通知级别名称",
+            field: "NoticeLevelName",
+            suppressMenu: true
+        }, {
+            headerName: "评分总条数",
+            field: "StarCount",
+            suppressMenu: true
+        }, {
+            headerName: "评论总条数",
+            field: "CommentCount",
+            suppressMenu: true
+        }, {
+            headerName: '操作',
+            width: 100,
+            suppressMenu: true,
+            cellRenderer: $scope.operCellRendererFunc
+        }]); //默认值eventName: "gridOptions.event"
+
+    $scope.gridOptions = {
+        columnDefs: $scope.columnDefs,
+        virtualPaging: true
+    }
+    $.extend($scope.gridOptions, $scope.options);
 
 }])
 app.controller('stockManageCtrl', ['$scope', function($scope) {
