@@ -1,0 +1,236 @@
+{
+    "reqLogGuid": "6149FEFBA0074E99A30DD3AB7A27DB10",
+    "result": {},
+    "operation": {},
+    "errorText": "",
+    "errorDetail": "",
+    "errorCode": "100",
+    "grid": {
+        "inventoryGrid": {
+            "total": 1000,
+            "loaddata": false,
+            "rows": [{
+                "ownerName": "百
+                胜平台 - 店铺A ","
+                productCode ":"
+                L24220332202106 ","
+                ownerId ":"
+                260788 ","
+                skuName ":"
+                本白撞黑 XL ","
+                qtyAvailable ":" - 7 ","
+                productCodeUkid ": "
+                911237000000821 ",
+                "qtyUnused": "0",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "7",
+                "categoryName": "",
+                "qtyLock": "14",
+                "qtyUnqualified": "0",
+                "productTitle": "2014新品飘逸网
+                纱 短裙 测试,
+                本白撞黑,
+                XL ","
+                skuId ":"
+                L24220332202106 ","
+                qtyStockLock ":"
+                0 ","
+                inventoryUkid ":"
+                911237000000893 "},{"
+                ownerName ": "
+                百胜平台 - 店铺A ",
+                "productCode": "L24220332202105",
+                "ownerId": "260788",
+                "skuName": "本白撞黑 L",
+                "qtyAvailable": "-4",
+                "productCodeUkid": "911237000000818",
+                "qtyUnused": "0",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "4",
+                "categoryName": "",
+                "qtyLock": "8",
+                "qtyUnqualified": "0",
+                "productTitle": "2014
+                新品飘逸网纱 短裙 测试,
+                本白撞黑,
+                XL ","
+                skuId ":"
+                L24220332202105 ","
+                qtyStockLock ":"
+                0 ","
+                inventoryUkid ":"
+                911237000000891 "
+            }, {
+                "ownerName": "百胜平台-店铺A",
+                "productCode": "L24220332202104",
+                "ownerId": "260788",
+                "skuName": "本白撞黑 M",
+                "qtyAvailable": "-6",
+                "productCodeUkid": "911237000000815",
+                "qtyUnused": "0",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "6",
+                "categoryName": "",
+                "qtyLock": "12",
+                "qtyUnqualified": "0",
+                "productTitle": "2014
+                新品飘逸网纱 短裙 测试,
+                本白撞黑,
+                XL ","
+                skuId ":"
+                L24220332202104 ","
+                qtyStockLock ":"
+                0 ","
+                inventoryUkid ":"
+                911237000000889 "
+            }, {
+                "ownerName": "百胜平台-店铺A",
+                "productCode": "L24220332202103",
+                "ownerId": "260788",
+                "skuName": "本白撞黑 S",
+                "qtyAvailable": "1000",
+                "productCodeUkid": "911237000000812",
+                "qtyUnused": "1000",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "1000",
+                "categoryName": "",
+                "qtyLock": "0",
+                "qtyUnqualified": "0",
+                "productTitle": "2014新品飘逸网纱 短裙 测试,本白撞黑,XL",
+                "skuId": "L24220332202103",
+                "qtyStockLock": "0",
+                "inventoryUkid": "911237000000887"
+            }, {
+                "ownerName": "百胜平台-店铺A",
+                "productCode": "L24220332202102",
+                "ownerId": "260788",
+                "skuName": "本白撞黑 XS",
+                "qtyAvailable": "-9",
+                "productCodeUkid": "911237000000809",
+                "qtyUnused": "0",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "9",
+                "categoryName": "",
+                "qtyLock": "18",
+                "qtyUnqualified": "0",
+                "productTitle": "2014新品飘逸网纱 短裙 测试,本白撞黑,XL",
+                "skuId": "L24220332202102",
+                "qtyStockLock": "0",
+                "inventoryUkid": "911237000000885"
+            }, {
+                "ownerName": "百胜平台-店铺A",
+                "productCode": "L24220332202101",
+                "ownerId": "260788",
+                "skuName": "本白撞黑 XXS",
+                "qtyAvailable": "1000",
+                "productCodeUkid": "911237000000806",
+                "qtyUnused": "1000",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "1000",
+                "categoryName": "",
+                "qtyLock": "0",
+                "qtyUnqualified": "0",
+                "productTitle": "2014新品飘逸网纱 短裙 测试,本白撞黑,XL",
+                "skuId": "L24220332202101",
+                "qtyStockLock": "0",
+                "inventoryUkid": "911237000000883"
+            }, {
+                "ownerName": "百胜平台-店铺A",
+                "productCode": "L24220332202006",
+                "ownerId": "260788",
+                "skuName": "白撞黑 XL",
+                "qtyAvailable": "0",
+                "productCodeUkid": "911237000000803",
+                "qtyUnused": "0",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "2",
+                "categoryName": "",
+                "qtyLock": "2",
+                "qtyUnqualified": "0",
+                "productTitle": "2014新品飘逸网纱 短裙 测试,本白撞黑,XL",
+                "skuId": "L24220332202006",
+                "qtyStockLock": "0",
+                "inventoryUkid": "911237000000881"
+            }, {
+                "ownerName": "百胜平台-店铺A",
+                "productCode": "L24220332202005",
+                "ownerId": "260788",
+                "skuName": "白撞黑 L",
+                "qtyAvailable": "-5",
+                "productCodeUkid": "911237000000800",
+                "qtyUnused": "0",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "5",
+                "categoryName": "",
+                "qtyLock": "10",
+                "qtyUnqualified": "0",
+                "productTitle": "2014新品飘逸网纱 短裙 测试,本白撞黑,XL",
+                "skuId": "L24220332202005",
+                "qtyStockLock": "0",
+                "inventoryUkid": "911237000000879"
+            }, {
+                "ownerName": "百胜平台-店铺A",
+                "productCode": "L24220332202004",
+                "ownerId": "260788",
+                "skuName": "白撞黑 M",
+                "qtyAvailable": "-6",
+                "productCodeUkid": "911237000000797",
+                "qtyUnused": "0",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "6",
+                "categoryName": "",
+                "qtyLock": "12",
+                "qtyUnqualified": "0",
+                "productTitle": "2014新品飘逸网纱 短裙 测试,本白撞黑,XL",
+                "skuId": "L24220332202004",
+                "qtyStockLock": "0",
+                "inventoryUkid": "911237000000877"
+            }, {
+                "ownerName": "百胜平台-店铺A",
+                "productCode": "L24220332202003",
+                "ownerId": "260788",
+                "skuName": "白撞黑 S",
+                "qtyAvailable": "1000",
+                "productCodeUkid": "911237000000794",
+                "qtyUnused": "1000",
+                "dateUpdated": "",
+                "productId": "L242203322",
+                "__serverStatus": "append",
+                "qtyOnLocation": "1000",
+                "categoryName": "",
+                "qtyLock": "0",
+                "qtyUnqualified": "0",
+                "productTitle": "2014新品飘逸网纱 短裙 测试,本白撞黑,XL",
+                "skuId": "L24220332202003",
+                "qtyStockLock": "0",
+                "inventoryUkid": "911237000000875"
+            }]
+        },
+        "inventoryLockTempGrid": {
+            "total": 0,
+            "loaddata": false,
+            "rows": []
+        },
+        "presaleInventoryGrid": { "total": 0, "loaddata": false, "rows": [] },
+        "inventoryLockGrid": { "total": 0, "loaddata": false, "rows": [] }
+    },
+    "attr": {}
+}
