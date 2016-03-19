@@ -1,7 +1,8 @@
 // 'use strict';
 app
     .config(
-        function($stateProvider, $urlRouterProvider) {
+        function($stateProvider, $urlRouterProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
             $urlRouterProvider
                 .otherwise('/login');
             $stateProvider
@@ -96,10 +97,8 @@ app
                     abstract: true,
                     templateUrl: "views/demo/route.html",
                     controller: function($scope, $state) {
-                        debugger
                         $scope.model = "hemingyeah";
                         $scope.refresh = function(scope, $state) {
-                            debugger
                             
                             // $state.go('iscs.main.tab.default')
                         }
