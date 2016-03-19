@@ -4,7 +4,7 @@
 
 angular.module('app')
     .controller('AppCtrl',
-        function($scope, $translate, $localStorage, $window, service) {
+        function($scope, $translate, $localStorage, $window, $state, service) {
             var isIE = !!navigator.userAgent.match(/MSIE/i);
             isIE && angular.element($window.document.body).addClass('ie');
             isSmartDevice($window) && angular.element($window.document.body).addClass('smart');
@@ -124,18 +124,5 @@ angular.module('app')
                     data.class = "btn-info"
                 };
             }
-            $scope.refresh = function() {
-                    $http({
-                        method: 'GET',
-                        url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
-                        headers: {
-                            // SessionId: sessionStorage.getItem("SessionID")
-                        },
-                        params: '',
-                        data: ''
-                    }).success(function(data) {
-                        $scope.model.test = data
-                    }).error(function(data) {})
-                }
                 /*改造框架*/
         });
