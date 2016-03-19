@@ -1,7 +1,8 @@
 // 'use strict';
 app
     .config(
-        function($stateProvider, $urlRouterProvider) {
+        function($stateProvider, $urlRouterProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
             $urlRouterProvider
                 .otherwise('/login');
             $stateProvider
@@ -93,23 +94,28 @@ app
                     }
                 })
                 .state('iscs.main', {
-                    url: '/main',
                     abstract: true,
-                    templateUrl: "views/demo/route.html"
+                    templateUrl: "views/demo/route.html",
+                    controller: function($scope, $state) {
+                        $scope.model = "hemingyeah";
+                        $scope.refresh = function(scope, $state) {
+                            
+                            // $state.go('iscs.main.tab.default')
+                        }
+                    },
                 })
                 .state('iscs.main.tab', {
                     url: '/tab',
-                    controller: function($scope) {
-                        $scope.model = "hemingyeah"
-                    },
                     views: {
                         "default": {
+                            url: '/default',
                             "templateProvider": function($templateCache) {
                                 return $templateCache.get('default_tpl.html')
                             },
                             // "controller": "personalInfoCtrl as personalInfo"  
                         },
                         "personalInfo": {
+                            url: '/personalInfo',
                             "templateProvider": function($templateCache) {
                                 return $templateCache.get('personalInfo_tpl.html')
                             },
@@ -185,39 +191,169 @@ app
                 })
         }
     );
-app.controller('personalInfoCtrl', ['$scope', function($scope) {
-    // $scope.$watch('model.test', function(newVal, old) {
-    // })
+app.controller('personalInfoCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    
+    // $state.reload('contact.baseInfo');
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
 }])
-app.controller('baseInfoCtrl', ['$scope', function($scope) {
+app.controller('baseInfoCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
+}])
+app.controller('goodsInfoCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
+}])
+app.controller('goodsKindCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
+}])
+app.controller('shopManageCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
+}])
+app.controller('disManageCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
+}])
+app.controller('orderSearchCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
+}])
+app.controller('orderHisCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
+}])
+app.controller('providerManageCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
+}])
+app.controller('repManageCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
 
-}])
-app.controller('goodsInfoCtrl', ['$scope', function($scope) {
-
-}])
-app.controller('goodsKindCtrl', ['$scope', function($scope) {
-
-}])
-app.controller('shopManageCtrl', ['$scope', function($scope) {
-
-}])
-app.controller('disManageCtrl', ['$scope', function($scope) {
-
-}])
-app.controller('orderSearchCtrl', ['$scope', function($scope) {
-
-}])
-app.controller('orderHisCtrl', ['$scope', function($scope) {
-
-}])
-app.controller('providerManageCtrl', ['$scope', function($scope) {
-
-}])
-app.controller('repManageCtrl', ['$scope', function($scope) {
-
-}])
-//总库存查询
-app.controller('stockSearchCtrl', ['$scope', 'manageService', function($scope, manageServiceb    ) {
+    //总库存查询
     manageService.dataGridInit($scope);
     $scope.columnDefs = $scope.columnDefs.concat(
         [{
@@ -256,8 +392,20 @@ app.controller('stockSearchCtrl', ['$scope', 'manageService', function($scope, m
         virtualPaging: true
     }
     $.extend($scope.gridOptions, $scope.options);
-
 }])
-app.controller('stockManageCtrl', ['$scope', function($scope) {
-
+app.controller('stockManageCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
+    $scope.refresh = function() {
+        $http({
+            method: 'GET',
+            url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+            headers: {
+                // SessionId: sessionStorage.getItem("SessionID")
+            },
+            params: '',
+            data: ''
+        }).success(function(data) {
+            $scope.model.test = data
+        }).error(function(data) {})
+    }
+    $scope.refresh();
 }])
