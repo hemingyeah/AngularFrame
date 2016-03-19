@@ -1,6 +1,7 @@
+var COUNTDOWN=60; 
+var COUMIN=10; 
 
 //验证码读秒
-var COUNTDOWN=60; 
 function settime(val) { 
     if (COUNTDOWN == 0) { 
         val.removeAttribute("disabled");
@@ -17,29 +18,32 @@ function settime(val) {
         },1000) 
     } 
 } 
+//跳转登录读秒
+function outtime(){ 
+    if (COUMIN == 0) { 
+        window.location.href="#/login";
+        COUMIN = 10; 
+    } else { 
+        $('.minu').text("自动跳转(" + COUMIN + ")"); 
+        COUMIN--; 
+        setTimeout(function() { 
+            outtime();
+        },1000) 
+    } 
+}
+//手机号&ID验证
 function setPhone(val) {
-    var phone= $("input[name=phone]").val();
+    var phone = $("input[name=phone]").val();
+    var phonel = $("input[name=phone]");
+    var error = $('.callPwd-from-tip-error.phone');
     if(phone == '13051443788'){
-        $('.callPwd-from-tip-error.phone').hide();
+        error.hide();
+        phonel.removeClass('error');
         settime(val);
     }else{
-        $('.callPwd-from-tip-error.phone').show();
-        $('.callPwd-from-tip-error.phone span').text('关联手机号不正确');
+        error.show();
+        phonel.addClass('error');
+        error.find('span').text('关联手机号不正确');
     }
-    
 }
-$(function(){
-  // 用户名非空
-    $("input[name=uid]").blur(function(){
-        var user= $("input[name=uid]").val();
-        if( user == "" || user == undefined || user == null){
-            $(".callPwd-from-tip-error ").show();
-            $("input[name=uid]").addClass('error');
-            $(".callPwd-from-tip-error span").text("请输入工号");
-        }else{
-            $(".callPwd-from-tip-error ").hide();
-            $("input[name=uid]").removeClass('error');
-        }
-    });
-});
 
