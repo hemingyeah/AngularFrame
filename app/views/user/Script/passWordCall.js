@@ -21,7 +21,7 @@ function settime(val) {
 //跳转登录读秒
 function outtime(){ 
     if (COUMIN == 0) { 
-        window.location.href="#/login";
+        window.location.href="login";
         COUMIN = 10; 
     } else { 
         $('.minu').text("自动跳转(" + COUMIN + ")"); 
