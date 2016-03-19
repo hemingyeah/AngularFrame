@@ -28,7 +28,7 @@ function outtime(){
         COUMIN--; 
         setTimeout(function() { 
             outtime();
-        },1000) 
+        },1000);
     } 
 }
 //手机号&ID验证
