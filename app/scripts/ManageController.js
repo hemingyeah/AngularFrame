@@ -1,8 +1,8 @@
 // 'use strict';
 app
     .config(
-        function($stateProvider, $urlRouterProvider) {
-            //$locationProvider.html5Mode(true);
+        function($stateProvider, $urlRouterProvider,$locationProvider) {
+            $locationProvider.html5Mode(true);
             $urlRouterProvider
                 .otherwise('/login');
             $stateProvider
