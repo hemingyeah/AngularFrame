@@ -1,3 +1,7 @@
+/**
+ * gulp启动文件
+ */
+
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     usemin = require('gulp-usemin'),
@@ -33,16 +37,25 @@ gulp.task('usemin', function() {
 
 gulp.task('build-custom', ['custom-images', 'custom-js', 'custom-less']);
 
+/**
+ * 处理图片
+ */
 gulp.task('custom-images', function() {
     return gulp.src(paths.images)
         .pipe(gulp.dest('dist/images'));
 });
 
+/**
+ * 处理js
+ */
 gulp.task('custom-js', function() {
     return gulp.src(paths.scripts)
         .pipe(gulp.dest('dist/js'));
 });
 
+/**
+ * 处理less
+ */
 gulp.task('custom-less', function() {
     return gulp.src(paths.styles)
         .pipe(less())
@@ -60,7 +73,7 @@ gulp.task('watch', function() {
 });
 
 /**
- * webserver
+ * web服务
  */
 gulp.task('webserver', function() {
     connect.server({
@@ -73,21 +86,23 @@ gulp.task('webserver', function() {
     });
 });
 
+/**
+ * 重启web服务
+ */
 gulp.task('livereload', function() {
     gulp.src(['dist/**/*.*'])
         .pipe(watch(['dist/**/*.*']))
         .pipe(connect.reload());
 });
 
-//清除dist文件
+//清除dist文件夹
 gulp.task('clean', function() {
-    gulp.src('dist/**/*.*')
+    gulp.src('dist')
         .pipe(clean());
 });
 
 /**
- * Gulp Tasks
- * 
+ * Gulp任务
  */
 gulp.task('build', ['usemin', 'build-custom']);
-gulp.task('default', ['build', 'webserver','livereload','watch']);
+gulp.task('default', ['clean', 'build', 'webserver', 'livereload', 'watch']);
