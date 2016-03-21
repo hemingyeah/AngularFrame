@@ -16,7 +16,7 @@
     "url": "https://github.com/hemingyeah/AngularFrame/issues"
   },
   "homepage": "https://github.com/hemingyeah/AngularFrame#readme",
-  "dependencies": {
+  "devDependencies": {
     "connect-history-api-fallback": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
