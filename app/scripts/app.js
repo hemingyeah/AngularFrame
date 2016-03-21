@@ -10,12 +10,9 @@ var app = angular.module('app', [
     'ui.router',
     'ui.bootstrap',
     'ui.load',
-    'ui.jq',
-    'ui.validate',
     'oc.lazyLoad',
     'pascalprecht.translate',
     'agGrid',
-    'ImageCropper'
 ]);
 console.log('test')
 var state = {

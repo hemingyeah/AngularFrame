@@ -7,12 +7,11 @@
     <meta name="description" content="web,app" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="Shortcut Icon" href='favicon.ico' type="image/x-icon">
-  
     <base href="/">
 </head>
 
 <body ng-controller="AppCtrl">
-    <link rel="stylesheet" href="styles/bootstrap.css"  />
+    <link rel="stylesheet" href="styles/bootstrap.css" />
     <link rel="stylesheet" href="styles/animate.css" type="text/css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="styles/simple-line-icons.css" type="text/css" />
@@ -27,9 +26,6 @@
         </div>
     </div>
     <div class="app" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ui-view></div>
-   
-  
-   
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- Angular -->
@@ -40,20 +36,11 @@
     <script src="bower_components/angular/angular-resource.js"></script>
     <script src="bower_components/angular/angular-sanitize.js"></script>
     <script src="bower_components/angular/angular-touch.js"></script>
-    <!-- alertify -->
-    <link rel="stylesheet" href="bower_components/alertify/dist/css/alertify.css" type="text/css" />
-    <script src="bower_components/alertify/dist/js/alertify.js"></script>
     <!-- aggrid -->
     <link href="bower_components/aggrid/ag-grid.min.css" rel="stylesheet">
     <link href="bower_components/aggrid/theme-blue.min.css" rel="stylesheet">
     <link href="bower_components/aggrid/theme-fresh.min.css" rel="stylesheet">
     <script src="bower_components/aggrid/ag-grid.js"></script>
-    <!-- Jcrop -->
-    <!-- <link rel="stylesheet" href="bower_components/jquery-Jcrop/css/jquery.Jcrop.css" /> -->
-    <!-- // <script type="text/javascript" src="bower_components/jquery-Jcrop/js/jquery.Jcrop.js"></script> -->
-    <!-- angularImageCrop -->
-    <link rel="stylesheet" href="bower_components/angularImageCrop/image-crop-styles.css" />
-    <script type="text/javascript" src="bower_components/angularImageCrop/image-crop.js"></script>
     <!--/bower_components -->
     <script src="bower_components/angular/angular-ui-router/angular-ui-router.js"></script>
     <script src="bower_components/angular/ngstorage/ngStorage.js"></script>
@@ -66,99 +53,30 @@
     <script src="bower_components/angular/angular-translate/loader-static-files.js"></script>
     <script src="bower_components/angular/angular-translate/storage-cookie.js"></script>
     <script src="bower_components/angular/angular-translate/storage-local.js"></script>
-    <script src="bower_components/aliyun/oss-js-upload.js"></script>
-    <script src="bower_components/aliyun/sdk/aliyun-sdk.min.js"></script>
-    <!-- App -->
+    <!-- app -->
     <script src="scripts/app.js"></script>
     <script src="scripts/config.js"></script>
     <script src="scripts/config.lazyload.js"></script>
-    <!--<script src="scripts/config.router.js"></script>xuhao 已将登陆路由移至app.js中-->
     <script src="scripts/main.js"></script>
+    <script src="scripts/PublicController.js"></script>
+    <script src="scripts/ManageController.js"></script>
     <script src="scripts/services/ui-load.js"></script>
     <!--<script src="scripts/filters/fromNow.js"></script>xuhao-->
-    <script src="scripts/directives/setnganimate.js"></script>
-    <script src="scripts/directives/ui-butterbar.js"></script>
-    <script src="scripts/directives/ui-focus.js"></script>
-    <script src="scripts/directives/ui-fullscreen.js"></script>
     <script src="scripts/directives/ui-jq.js"></script>
-    <script src="scripts/directives/ui-module.js"></script>
     <script src="scripts/directives/ui-nav.js"></script>
-    <script src="scripts/directives/ui-scroll.js"></script>
-    <script src="scripts/directives/ui-shift.js"></script>
-    <script src="scripts/directives/ui-toggleclass.js"></script>
-    <script src="scripts/directives/ui-validate.js"></script>
+    <!-- <script src="scripts/directives/ui-validate.js"></script> -->
     <script src="scripts/controllers/bootstrap.js"></script>
     <!-- Lazy loading -->
     <script src="bower_components/less-1.7.1.min.js"></script>
- 
     <link rel="stylesheet" href="bower_components/jquery/chosen/chosen.css" type="text/css" />
     <!-- ngDialog -->
     <link rel="stylesheet" href="bower_components/angular-plugin/ngDialog/css/ngDialog.min.css">
     <script src="bower_components/angular-plugin/ngDialog/js/ngDialog.min.js"></script>
     <script src="scripts/UrlConfig.js"></script>
-    <script src="scripts/PublicController.js"></script>
-    <script src="scripts/ManageController.js"></script>
-    <script src="bower_components/zTree/js/jquery.ztree.all-3.5.js"></script>
-    <link rel="stylesheet" href="bower_components/zTree/css/ztreeStyle/ztreeStyle.css">
+    <!-- XX_Route.js -->
     <script src="views/login/script/loginRoute.js"></script>
     <script src="views/user/script/passwordRoute.js"></script>
-    
     <script src="bower_components/less-1.7.1.min.js"></script>
-    <script>
-    var intervalList = [];
-    var GridColumnList = {};
-    var Route = {};
-    var __GetGridColumn = function(code) {
-        return GridColumnList[code];
-    }
-    </script>
-    <script>
-    /*文件上传*/
-    var FileUpload = {
-        BuildUploadObj: function() {
-            return new OssUpload({
-                bucket: 'doc-gtintel',
-                endpoint: 'http://oss-cn-hangzhou.aliyuncs.com',
-                chunkSize: 1048576,
-                concurrency: 2,
-                aliyunCredential: {
-                    "accessKeyId": "gin6ZIIh3NaJcvFf",
-                    "secretAccessKey": "BKY98SroF6UrPM8fnD3VOk4vNpCF8m"
-                }
-                // stsToken: stsToken
-            });
-        },
-        BuildUploadSetting: function(file, folder, done, error, progress) {
-            return {
-                file: file,
-                key: folder + file.name.substr(file.name.lastIndexOf('.')),
-                maxRetry: 3,
-                headers: {
-                    'CacheControl': 'public',
-                    'Expires': '',
-                    'ContentEncoding': '',
-                    'ContentDisposition': '',
-                    'ServerSideEncryption': ''
-                },
-                onerror: error,
-                oncomplete: done,
-                onprogress: progress
-            };
-        },
-        BuildGUID: function() {
-            var s = [];
-            var hexDigits = "0123456789abcdef";
-            for (var i = 0; i < 36; i++) {
-                s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
-            }
-            s[14] = "4"; // bits 12-15 of the time_hi_and_version field to 0010
-            s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
-            s[8] = s[13] = s[18] = s[23] = "-";
-            var uuid = s.join("");
-            return uuid;
-        }
-    };
-    </script>
     <script type="text/ng-template" id="nodes_renderer.html">
         <div class="tree-node tree-node-content">
             <a data-nodrag ng-click="children.collapsed=!children.collapsed;TreeEvent.LoadChildData(this,children)" ng-if='children.isParent'>

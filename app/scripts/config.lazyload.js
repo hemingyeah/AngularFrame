@@ -107,12 +107,6 @@ angular.module('app')
                   ]
               },
               {
-                  name:'angularFileUpload',
-                  files: [
-                    '/vendor/modules/angular-file-upload/angular-file-upload.min.js'
-                  ]
-              },
-              {
                   name:'uiUploader',
                   files: [
                     '/node_modules/angular-plugin/uploader/uploader.js'
@@ -121,13 +115,6 @@ angular.module('app')
               {
                   name:'ui.calendar',
                   files: ['/vendor/modules/angular-ui-calendar/calendar.js']
-              },
-              {
-                  name: 'ngImgCrop',
-                  files: [
-                      '/vendor/modules/ngImgCrop/ng-img-crop.js',
-                      '/vendor/modules/ngImgCrop/ng-img-crop.css'
-                  ]
               },
               {
                   name: 'angularBootstrapNavTree',
@@ -141,13 +128,6 @@ angular.module('app')
                   files: [
                       '/vendor/modules/angularjs-toaster/toaster.js',
                       '/vendor/modules/angularjs-toaster/toaster.css'
-                  ]
-              },
-              {
-                  name: 'textAngular',
-                  files: [
-                      '/vendor/modules/textAngular/textAngular-sanitize.min.js',
-                      '/vendor/modules/textAngular/textAngular.min.js'
                   ]
               },
               {
