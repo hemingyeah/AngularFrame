@@ -7,25 +7,29 @@
     <meta name="description" content="web,app" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="Shortcut Icon" href='favicon.ico' type="image/x-icon">
-    <link rel="stylesheet" href="styles/bootstrap.css" type="text/css" />
+  
+    <base href="/">
+</head>
+
+<body ng-controller="AppCtrl">
+    <link rel="stylesheet" href="styles/bootstrap.css"  />
     <link rel="stylesheet" href="styles/animate.css" type="text/css" />
-    <link rel="stylesheet" href="fonts/font-awesome1.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="styles/simple-line-icons.css" type="text/css" />
     <link rel="stylesheet" href="fonts/font.css" type="text/css" />
     <link rel="stylesheet" href="styles/app.css" type="text/css" />
     <!-- 网仓登陆页面样式 11-->
     <link rel="stylesheet" href="styles/page.css" />
     <link rel="stylesheet/less" href="styles/user/login.less" />
-    <base href="/index.html" />
-</head>
-
-<body ng-controller="AppCtrl">
     <div class='loading'>
         <div>
             <img alt="数据加载中..." src="images/Loading.gif">
         </div>
     </div>
     <div class="app" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ui-view></div>
+   
+  
+   
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- Angular -->
@@ -86,7 +90,7 @@
     <script src="scripts/controllers/bootstrap.js"></script>
     <!-- Lazy loading -->
     <script src="bower_components/less-1.7.1.min.js"></script>
-    <link rel="stylesheet/less" href="styles/ControlStyle.less">
+ 
     <link rel="stylesheet" href="bower_components/jquery/chosen/chosen.css" type="text/css" />
     <!-- ngDialog -->
     <link rel="stylesheet" href="bower_components/angular-plugin/ngDialog/css/ngDialog.min.css">

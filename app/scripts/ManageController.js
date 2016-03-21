@@ -2,12 +2,15 @@
 app
     .config(
         function($stateProvider, $urlRouterProvider,$locationProvider) {
-            $locationProvider.html5Mode(true);
+          $locationProvider.html5Mode({
+                enabled: true
+             
+          });
             $urlRouterProvider
                 .otherwise('/login');
             $stateProvider
                 .state('iscs', {
-                    abstract: true,
+                    abstract: false,
                     url: '/iscs',
                     templateUrl: 'views/index.html',
                     controller: function($scope, $state, service) {

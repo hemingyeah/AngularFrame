@@ -8,9 +8,13 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
     minifyHTML = require('gulp-htmlmin'),
-    clean = require('gulp-clean'); 
-    
-var  paths={
+    clean = require('gulp-clean');
+
+var express = require('express'),
+    path = require('path'),
+    historyApiFallback = require('connect-history-api-fallback');
+
+var paths = {
     scripts: 'app/scripts/**/*.*',
     styles: 'app/styles/**/*.*',
     images: 'app/images/**/*.*',
@@ -18,13 +22,14 @@ var  paths={
 };
 
 //处理首页bower components
+gulp.task('usemin', function() {
 
-gulp.task('usemin',function(){
-    
-      return gulp.src(paths.index)
+    return gulp.src(paths.index)
         .pipe(usemin({
             js: [minifyJs(), 'concat'],
-            css: [minifyCss({keepSpecialComments: 0}), 'concat'],
+            css: [minifyCss({
+                keepSpecialComments: 0
+            }), 'concat'],
         }))
         .pipe(gulp.dest('dist/'));
 });
@@ -47,6 +52,7 @@ gulp.task('custom-less', function() {
         .pipe(gulp.dest('dist/css'));
 });
 
+
 /**
  * webserver
  */
@@ -54,7 +60,10 @@ gulp.task('webserver', function() {
     connect.server({
         root: 'app',
         livereload: true,
-        port: 8080
+        port: 8080,
+        middleware: function(connect, opt) {
+            return [historyApiFallback()];
+        }
     });
 });
 
@@ -66,7 +75,7 @@ gulp.task('livereload', function() {
 });
 
 //清除dist文件
-gulp.task('clean',function(){
+gulp.task('clean', function() {
     gulp.src('dist/**/*.*')
         .pipe(clean());
 });
@@ -75,7 +84,5 @@ gulp.task('clean',function(){
  * Gulp Tasks
  * 
  */
-gulp.task('build',['usemin','build-custom']);
-gulp.task('default', ['build','webserver']);
-
-
+gulp.task('build', ['usemin', 'build-custom']);
+gulp.task('default', ['build', 'webserver']);

@@ -124,5 +124,6 @@ angular.module('app')
                     data.class = "btn-info"
                 };
             }
+            
                 /*改造框架*/
         });
