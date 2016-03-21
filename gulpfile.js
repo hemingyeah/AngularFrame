@@ -8,10 +8,7 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
     minifyHTML = require('gulp-htmlmin'),
-    clean = require('gulp-clean');
-
-var express = require('express'),
-    path = require('path'),
+    clean = require('gulp-clean'),
     historyApiFallback = require('connect-history-api-fallback');
 
 var paths = {
@@ -52,6 +49,15 @@ gulp.task('custom-less', function() {
         .pipe(gulp.dest('dist/css'));
 });
 
+/**
+ * 监视文件变化
+ */
+gulp.task('watch', function() {
+    gulp.watch([paths.images], ['custom-images']);
+    gulp.watch([paths.styles], ['custom-less']);
+    gulp.watch([paths.scripts], ['custom-js']);
+    gulp.watch([paths.index], ['usemin']);
+});
 
 /**
  * webserver
@@ -66,7 +72,6 @@ gulp.task('webserver', function() {
         }
     });
 });
-
 
 gulp.task('livereload', function() {
     gulp.src(['dist/**/*.*'])
@@ -85,4 +90,4 @@ gulp.task('clean', function() {
  * 
  */
 gulp.task('build', ['usemin', 'build-custom']);
-gulp.task('default', ['build', 'webserver']);
+gulp.task('default', ['build', 'webserver','livereload','watch']);
