@@ -1,11 +1,11 @@
-
 <ul class="nav nav-tabs tabDemo">
     <li ng-repeat="tab in tabItems track by $index" role="presentation">
         <i class="glyphicon glyphicon-remove" ng-click="closeTab(tab, $index)" ng-show="$index"></i>
-        <button class="btn {{tab.class}}" ng-bind="tab.Name" ng-click="ifShow(tab, $event)" ui-sref-opt={reload: true} ng-dblclick="refresh($scope,url)" style="display: block;"></button>
+        <button class="btn {{tab.class}}" ng-bind="tab.Name" ng-click="ifShow(tab, $event)" ng-dblclick="refresh($scope,url)" style="display: block;"></button>
     </li>
-</ul>	
+</ul>
 <!-- <div ui-view="menu0" class="well"></div> -->
-<div ng-repeat="tab in tabItems track by $index" ng-show="tab.show">
-    <div ui-view="{{tab.view}}" class="well" style="min-height: 800px"></div>
-</div> 
+<!-- <div ng-repeat="tab in tabItems track by $index" ng-show="tab.show"> -->
+<div ng-repeat="tab in tabItems track by $index" ng-show="tab.show" ui-view="{{tab.view}}" class="well" load-data="loadData()" style="min-height: 800px">
+</div>
+<!-- </div>  -->

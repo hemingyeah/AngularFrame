@@ -97,6 +97,9 @@ app
                     abstract: true,
                     templateUrl: "views/demo/route.html",
                     controller: function($scope, $state) {
+                        $scope.loadData = function() {
+                            
+                        };
                         $scope.model = "hemingyeah";
                         $scope.refresh = function(scope, $state) {
                             
@@ -117,6 +120,7 @@ app
                         "personalInfo": {
                             url: '/personalInfo',
                             "templateProvider": function($templateCache) {
+                                debugger
                                 return $templateCache.get('personalInfo_tpl.html')
                             },
                             "controller": "personalInfoCtrl as personalInfo"
@@ -191,6 +195,16 @@ app
                 })
         }
     );
+app.directive('loadData', [function () {
+    scope: {
+        loadData1: '@load-data'
+    }
+    return {
+        restrict: 'A',
+        link: function (scope, iElement, iAttrs) {
+        }
+    };
+}])
 app.controller('personalInfoCtrl', ['$scope', '$state', '$http', function($scope, $state, $http) {
     
     // $state.reload('contact.baseInfo');
