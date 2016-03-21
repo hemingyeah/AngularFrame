@@ -11,7 +11,7 @@ angular.module('app')
             // config
             $scope.app = {
                 name: '网仓3号',
-                UserName: service.Cookie.Get("UserName"),
+                UserName: service.Cookie.Get("UserName") || "系统管理员",
                 GroupRelationName: service.Cookie.Get("GroupRelationName"),
                 version: '1.3.3',
                 Layout: false,
