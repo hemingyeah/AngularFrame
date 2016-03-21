@@ -11,6 +11,7 @@
 </head>
 
 <body ng-controller="AppCtrl">
+    <link rel="stylesheet" href="styles/login.css" />
     <link rel="stylesheet" href="styles/bootstrap.css" />
     <link rel="stylesheet" href="styles/animate.css" type="text/css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
@@ -30,29 +31,17 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- Angular -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular/i18n/angular-locale_zh-cn.js"></script>
-    <script src="bower_components/angular/angular-animate.js"></script>
-    <script src="bower_components/angular/angular-cookies.js"></script>
-    <script src="bower_components/angular/angular-resource.js"></script>
-    <script src="bower_components/angular/angular-sanitize.js"></script>
-    <script src="bower_components/angular/angular-touch.js"></script>
-    <!-- aggrid -->
-    <link href="bower_components/aggrid/ag-grid.min.css" rel="stylesheet">
-    <link href="bower_components/aggrid/theme-blue.min.css" rel="stylesheet">
-    <link href="bower_components/aggrid/theme-fresh.min.css" rel="stylesheet">
-    <script src="bower_components/aggrid/ag-grid.js"></script>
-    <!--/bower_components -->
-    <script src="bower_components/angular/angular-ui-router/angular-ui-router.js"></script>
-    <script src="bower_components/angular/ngstorage/ngStorage.js"></script>
-    <!-- bootstrap -->
-    <script src="bower_components/angular/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <!-- lazyload -->
-    <script src="bower_components/angular-plugin/ocLazyLoad/ocLazyLoad.min.js"></script>
-    <!-- translate -->
-    <script src="bower_components/angular/angular-translate/angular-translate.js"></script>
-    <script src="bower_components/angular/angular-translate/loader-static-files.js"></script>
-    <script src="bower_components/angular/angular-translate/storage-cookie.js"></script>
-    <script src="bower_components/angular/angular-translate/storage-local.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_zh-cn.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/ocLazyLoad/dist/ocLazyLoad.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    
     <!-- app -->
     <script src="scripts/app.js"></script>
     <script src="scripts/config.js"></script>
@@ -66,17 +55,11 @@
     <script src="scripts/directives/ui-nav.js"></script>
     <!-- <script src="scripts/directives/ui-validate.js"></script> -->
     <script src="scripts/controllers/bootstrap.js"></script>
-    <!-- Lazy loading -->
-    <script src="bower_components/less-1.7.1.min.js"></script>
-    <link rel="stylesheet" href="bower_components/jquery/chosen/chosen.css" type="text/css" />
-    <!-- ngDialog -->
-    <link rel="stylesheet" href="bower_components/angular-plugin/ngDialog/css/ngDialog.min.css">
-    <script src="bower_components/angular-plugin/ngDialog/js/ngDialog.min.js"></script>
+   
     <script src="scripts/UrlConfig.js"></script>
     <!-- XX_Route.js -->
     <script src="views/login/script/loginRoute.js"></script>
     <script src="views/user/script/passwordRoute.js"></script>
-    <script src="bower_components/less-1.7.1.min.js"></script>
     <script type="text/ng-template" id="nodes_renderer.html">
         <div class="tree-node tree-node-content">
             <a data-nodrag ng-click="children.collapsed=!children.collapsed;TreeEvent.LoadChildData(this,children)" ng-if='children.isParent'>

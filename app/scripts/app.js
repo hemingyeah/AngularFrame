@@ -5,14 +5,12 @@ var app = angular.module('app', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngTouch',
     'ngStorage',
     'ui.router',
     'ui.bootstrap',
     'ui.load',
     'oc.lazyLoad',
-    'pascalprecht.translate',
-    'agGrid',
+    'pascalprecht.translate'
 ]);
 console.log('test')
 var state = {

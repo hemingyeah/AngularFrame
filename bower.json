@@ -15,6 +15,19 @@
   ],
   "dependencies": {
     "font-awesome": "^4.5.0",
-    "angular": "^1.5.2"
+    "angular": "^1.5.2",
+    "jquery": "^2.2.2",
+    "angular-ui-router": "ui-router#^0.2.18",
+    "bootstrap": "^3.3.6",
+    "angular-cookies": "^1.5.2",
+    "angular-animate": "^1.5.2",
+    "ag-grid": "^4.0.4",
+    "angular-i18n": "^1.5.2",
+    "angular-resource": "^1.5.2",
+    "angular-sanitize": "^1.5.2",
+    "ngstorage": "^0.3.10",
+    "angular-translate": "^2.11.0",
+    "oclazyload": "ocLazyLoad#^1.0.9",
+    "angular-bootstrap": "^1.2.5"
   }
 }
