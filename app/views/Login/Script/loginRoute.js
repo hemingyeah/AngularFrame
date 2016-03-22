@@ -9,7 +9,7 @@ app
 					deps: ['$ocLazyLoad',
 						function($ocLazyLoad) {
 							return $ocLazyLoad.load([
-                                'styles/user/loginIn.css',
+                                'styles/lib/slideBox.css',
 								'views/login/script/loginController.js',
 								'scripts/switch.js',
 								'scripts/jquery.SuperSlide.2.1.1.js'

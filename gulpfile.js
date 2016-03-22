@@ -95,14 +95,16 @@ gulp.task('livereload', function() {
         .pipe(connect.reload());
 });
 
+/*
 //清除dist文件夹
 gulp.task('clean', function() {
-    gulp.src('dist')
+    gulp.src('dist',{read: false})
         .pipe(clean());
 });
+*/
 
 /**
  * Gulp任务
- */
+*/
 gulp.task('build', ['usemin', 'build-custom']);
-gulp.task('default', ['clean', 'build', 'webserver', 'livereload', 'watch']);
+gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);

@@ -1,0 +1,79 @@
+[{
+    Name: "基础管理",
+    ChildMenu: [{
+        Name: "个人信息",
+        view: "personalInfo",
+        show: false,
+        class: ''
+    }, {
+        Name: "基础信息",
+        view: "baseInfo",
+        show: false,
+        class: ''
+    }]
+}, {
+    Name: "商品管理",
+    ChildMenu: [{
+        Name: "商品资料管理",
+        view: "goodsInfo",
+        show: false,
+        class: ''
+    }, {
+        Name: "商品品类管理",
+        view: "goodsKind",
+        show: false,
+        class: ''
+    }]
+}, {
+    Name: "店铺管理",
+    ChildMenu: [{
+        Name: "店铺管理",
+        view: "shopManage",
+        show: false,
+        class: ''
+    }, {
+        Name: "铺货管理",
+        view: "disManage",
+        show: false,
+        class: ''
+    }]
+}, {
+    Name: "订单管理",
+    ChildMenu: [{
+        Name: "订单查询",
+        view: "orderSearch",
+        show: false,
+        class: ''
+    }, {
+        Name: "历史订单",
+        view: "orderHis",
+        show: false,
+        class: ''
+    }]
+}, {
+    Name: "供应链管理",
+    ChildMenu: [{
+        Name: "供应商管理",
+        view: "providerManage",
+        show: false,
+        class: ''
+    }, {
+        Name: "库内加工管理",
+        view: "repManage",
+        show: false,
+        class: ''
+    }]
+}, {
+    Name: "库存管理",
+    ChildMenu: [{
+        Name: "总库存查询",
+        view: "stockSearch",
+        show: false,
+        class: ''
+    }, {
+        Name: "仓库库存管理",
+        view: "stockManage",
+        show: false,
+        class: ''
+    }]
+}];
